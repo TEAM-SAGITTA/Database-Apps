@@ -10,3 +10,5 @@ C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMa
 C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.csproj.GenerateResource.Cache
 C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.exe
 C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.pdb
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.exe
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.pdb
