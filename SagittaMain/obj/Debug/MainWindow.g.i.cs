@@ -71,7 +71,7 @@ namespace SagittaMain {
             {
             case 1:
             
-            #line 7 "..\..\MainWindow.xaml"
+            #line 8 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default
@@ -79,7 +79,7 @@ namespace SagittaMain {
             return;
             case 2:
             
-            #line 8 "..\..\MainWindow.xaml"
+            #line 9 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
             
             #line default
@@ -87,7 +87,7 @@ namespace SagittaMain {
             return;
             case 3:
             
-            #line 9 "..\..\MainWindow.xaml"
+            #line 10 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_2);
             
             #line default
