@@ -26,7 +26,17 @@ namespace SagittaMain
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Report Import Magic !!!");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
             MessageBox.Show("Zip Import Magic !!!");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("PDF Report Magic !!!\nDeveloper - Doncho Donchev");
         }
     }
 }

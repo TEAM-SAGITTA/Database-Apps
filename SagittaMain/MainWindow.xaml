@@ -3,8 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="74,112,0,0" VerticalAlignment="Top" Width="139" Click="Button_Click" Cursor="Hand" ToolTip="Zip file Import" Opacity="0.01" Height="74"/>
+        <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill" Cursor="Hand"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Cursor="Hand" ToolTip="Zip file Import" Opacity="0.2" Height="44" Background="#FF0B0BDE"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click_1" Height="55" Background="#FF0B0BDE" Opacity="0.2"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="488,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
