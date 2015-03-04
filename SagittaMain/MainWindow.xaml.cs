@@ -26,7 +26,7 @@ namespace SagittaMain
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Zip Import");
+            MessageBox.Show("Zip Import Magic !!!");
         }
     }
 }
