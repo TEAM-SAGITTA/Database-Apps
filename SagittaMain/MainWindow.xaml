@@ -3,10 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill" Cursor="Hand"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="449*"/>
+            <ColumnDefinition Width="343*"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill" Cursor="Hand" Margin="0,0,0,-2" Grid.ColumnSpan="2"/>
         <Button Content="" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Cursor="Hand" ToolTip="Zip file Import" Opacity="0.2" Height="44" Background="#FF0B0BDE"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click_1" Height="55" Background="#FF0B0BDE" Opacity="0.2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="488,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2" Grid.Column="1"/>
+        <Viewbox HorizontalAlignment="Left" Margin="368,49,0,0" VerticalAlignment="Top" Width="100" Height="93" Stretch="Fill" Grid.ColumnSpan="2">
+            <Button Content="&#xA;" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources\ButtonsPics\Button_6.png" />
+                </Button.Background>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="2.386"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.458"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+
+        </Viewbox>
 
     </Grid>
 </Window>

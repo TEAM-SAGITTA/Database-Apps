@@ -1,0 +1,6 @@
+G:\SotUni\TeamWorkDB\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe.config
+G:\SotUni\TeamWorkDB\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe
+G:\SotUni\TeamWorkDB\TestingCSharpCode\bin\Debug\TestingCSharpCode.pdb
+G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.csprojResolveAssemblyReference.cache
+G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.exe
+G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.pdb

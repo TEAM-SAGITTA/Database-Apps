@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaMain", "SagittaMain.csproj", "{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingCSharpCode", "..\TestingCSharpCode\TestingCSharpCode.csproj", "{BFDAD95A-3104-41B1-93AE-568FB2585A8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

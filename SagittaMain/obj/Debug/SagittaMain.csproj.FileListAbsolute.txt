@@ -12,3 +12,14 @@ C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMa
 C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.pdb
 G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.exe
 G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.pdb
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.csprojResolveAssemblyReference.cache
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\MainWindow.baml
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\MainWindow.g.cs
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\App.g.cs
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain_MarkupCompile.cache
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.g.resources
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.Properties.Resources.resources
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.csproj.GenerateResource.Cache
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.Resources.DbsPics.Resources.resources
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\SagittaMain.exe
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\SagittaMain.pdb

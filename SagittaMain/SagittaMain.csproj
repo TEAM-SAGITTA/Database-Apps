@@ -84,6 +84,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DbsPics\Resources.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +93,33 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ButtonsPics\Button_1.png" />
+    <Resource Include="Resources\ButtonsPics\Button_2.png" />
+    <Resource Include="Resources\ButtonsPics\Button_2a.png" />
+    <Resource Include="Resources\ButtonsPics\Button_3.png" />
+    <Resource Include="Resources\ButtonsPics\Button_4.png" />
+    <Resource Include="Resources\ButtonsPics\Button_5.png" />
+    <Resource Include="Resources\ButtonsPics\Button_5a.png" />
+    <Resource Include="Resources\ButtonsPics\Button_6.png" />
+    <Resource Include="Resources\ButtonsPics\Button_7.png" />
+    <Resource Include="Resources\ButtonsPics\Button_8.png" />
+    <Resource Include="Resources\ButtonsPics\Button_8a.png" />
+    <Resource Include="Resources\DbsPics\ExcelArhive.png" />
+    <Resource Include="Resources\DbsPics\ExcelFinancialReport.png" />
+    <Resource Include="Resources\DbsPics\JSON.png" />
+    <Resource Include="Resources\DbsPics\MongoDB.png" />
+    <Resource Include="Resources\DbsPics\MySQL.png" />
+    <Resource Include="Resources\DbsPics\PDFReport.png" />
+    <Resource Include="Resources\DbsPics\ProductData.png" />
+    <Resource Include="Resources\DbsPics\SQLite.png" />
+    <Resource Include="Resources\DbsPics\SQLServer.png" />
+    <Resource Include="Resources\DbsPics\XMLExpenceReport.png" />
+    <Resource Include="Resources\DbsPics\XMLVendorReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Files\expensesByVendorMonth.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
