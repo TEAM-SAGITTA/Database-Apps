@@ -27,7 +27,7 @@
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Report Import Magic !!!");
+            MessageBox.Show("Product Data to Oracle Magic !!!");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
