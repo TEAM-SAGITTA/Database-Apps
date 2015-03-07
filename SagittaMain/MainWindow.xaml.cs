@@ -29,17 +29,17 @@
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Report Import Magic !!!");
+            MessageBox.Show("Product Data to Oracle Magic !!!");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Zip Import Magic !!!");
+            MessageBox.Show("Zip file to MS SQL Server Magic !!!");
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("PDF Report Magic !!!\nDeveloper - Doncho Donchev");
+            MessageBox.Show("MS SQL to PDF Magic !!!\nDeveloper -> ");
         }
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
@@ -59,6 +59,41 @@
             }
 
             MessageBox.Show("Data loaded from XML file!");
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("MS SQL to XML Magic !!!");
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("JSON to MongDB Magic !!!");
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("MS SQL to MySQL Magic !!!");
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("MySQL to Excel Magic !!!");
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Oralce to MS SQL Server Magic !!!");
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("SQLite to Excel Magic !!!");
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("MS SQL to JSON Magic !!!");
         }
     }
 }

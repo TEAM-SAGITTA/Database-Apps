@@ -4,3 +4,8 @@ G:\SotUni\TeamWorkDB\TestingCSharpCode\bin\Debug\TestingCSharpCode.pdb
 G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.csprojResolveAssemblyReference.cache
 G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.exe
 G:\SotUni\TeamWorkDB\TestingCSharpCode\obj\Debug\TestingCSharpCode.pdb
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe.config
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.pdb
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\TestingCSharpCode\obj\Debug\TestingCSharpCode.exe
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\TestingCSharpCode\obj\Debug\TestingCSharpCode.pdb
