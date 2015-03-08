@@ -44,6 +44,7 @@
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
+            // Should be made a class that holds the button methods!
             string fileDirectoryName = @"\Files\expensesByVendorMonth.xml";
             string currentDir = Directory.GetCurrentDirectory();
             string binDir = System.IO.Directory.GetParent(currentDir).FullName;
@@ -52,10 +53,23 @@
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
-            XmlNodeList nodes = root.SelectNodes("vendor"); // You can also use XPath here
-            foreach (XmlNode node in nodes)
+            XmlNodeList vendors = root.SelectNodes("/expenses-by-month/vendor");
+            string vendorsAtribute = "name";
+            string expensesAtribute = "month";
+
+            // Just for test that did I extract the XML data correct!! 
+            foreach (XmlNode vendor in vendors)
             {
-                 MessageBox.Show((node.Attributes["name"].Value));
+                var vendorName = vendor.Attributes[vendorsAtribute].Value;
+                MessageBox.Show(vendorName);
+
+                XmlNodeList expenses = vendor.SelectNodes("expenses");
+                foreach (XmlNode expense in expenses)
+                {
+                    var month = expense.Attributes[expensesAtribute].Value;
+                    var monthExpence = expense.InnerText;
+                    MessageBox.Show(string.Format("{0} expenses: {1} $", month, monthExpence));
+                }
             }
 
             MessageBox.Show("Data loaded from XML file!");
