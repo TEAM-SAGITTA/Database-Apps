@@ -14,7 +14,9 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Navigation;
     using System.Windows.Shapes;
-
+    using System.Xml;
+    using System.Xml.Linq;
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -46,8 +48,16 @@
             string currentDir = Directory.GetCurrentDirectory();
             string binDir = System.IO.Directory.GetParent(currentDir).FullName;
             string filePath = System.IO.Directory.GetParent(binDir).FullName + fileDirectoryName;
-            string fileText = System.IO.File.ReadAllText(filePath);
-            MessageBox.Show(fileText);
+                        
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(filePath);
+            XmlElement root = xmlDoc.DocumentElement;
+            XmlNodeList nodes = root.SelectNodes("vendor"); // You can also use XPath here
+            foreach (XmlNode node in nodes)
+            {
+                 MessageBox.Show((node.Attributes["name"].Value));
+            }
+
             MessageBox.Show("Data loaded from XML file!");
         }
 
