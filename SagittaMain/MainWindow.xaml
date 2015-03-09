@@ -12,7 +12,7 @@
         <Button Content="#2_1" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click_1" Cursor="Hand" Height="55" Background="#FF0B0BDE" Opacity="0.2" ToolTip="Import from Zip file to MS SQL Server"/>
         <Button Content="#3" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2" Cursor="Hand" Grid.Column="1" ToolTip="MS SQL Server to PDF file"/>
         <Viewbox HorizontalAlignment="Left" Margin="368,49,0,0" VerticalAlignment="Top" Width="100" Height="93" Stretch="Fill" Grid.ColumnSpan="2">
-            <Button Content="#6" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100" Cursor="Hand" Opacity="0.2" ToolTip="Import Data From XML to MS SQL Server">
+            <Button Content="" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100" Cursor="Hand" Opacity="1" ToolTip="Import Data From XML to MS SQL Server">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources\ButtonsPics\Button_6.png" />
                 </Button.Background>
@@ -24,6 +24,7 @@
                         <TranslateTransform X="0.458"/>
                     </TransformGroup>
                 </Button.RenderTransform>
+
             </Button>
 
         </Viewbox>

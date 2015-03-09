@@ -119,7 +119,12 @@
     <Resource Include="Resources\DbsPics\XMLVendorReport.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Files\expensesByVendorMonth.xml" />
+    <Resource Include="Files\expensesByVendorMonth.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background_back_up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

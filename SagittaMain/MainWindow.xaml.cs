@@ -53,22 +53,26 @@
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
-            XmlNodeList vendors = root.SelectNodes("/expenses-by-month/vendor");
-            string vendorsAtribute = "name";
-            string expensesAtribute = "month";
+            string RootPath = "/expenses-by-month/vendor";
+            string RootAtribute = "name";
+            string childName = "expenses";
+            string childAtribute = "month";
+          
+            // Just for test that did I extract the XML data correct!!
 
-            // Just for test that did I extract the XML data correct!! 
-            foreach (XmlNode vendor in vendors)
+            XmlNodeList rootNodes = root.SelectNodes(RootPath);
+            foreach (XmlNode vendor in rootNodes)
             {
-                var vendorName = vendor.Attributes[vendorsAtribute].Value;
-                MessageBox.Show(vendorName);
+                var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
+                MessageBox.Show(RootAtributeValue); // remove this
 
-                XmlNodeList expenses = vendor.SelectNodes("expenses");
-                foreach (XmlNode expense in expenses)
+                XmlNodeList childNodes = vendor.SelectNodes(childName);
+                foreach (XmlNode expense in childNodes)
                 {
-                    var month = expense.Attributes[expensesAtribute].Value;
+                    var childNameValue = expense.Attributes[childAtribute].Value;
                     var monthExpence = expense.InnerText;
-                    MessageBox.Show(string.Format("{0} expenses: {1} $", month, monthExpence));
+                    // change with Insert INTO DB
+                    MessageBox.Show(string.Format("{0} {1} : {2} $", childNameValue, childName, monthExpence)); // remove this
                 }
             }
 
