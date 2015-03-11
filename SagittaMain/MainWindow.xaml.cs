@@ -1,4 +1,6 @@
-﻿namespace SagittaMain
+﻿using SagittaMain._5.SQLtoJSON;
+
+namespace SagittaMain
 {
     using System;
     using System.Collections.Generic;
@@ -44,6 +46,7 @@
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
+            // Should be made a class that holds the button methods!
             string fileDirectoryName = @"\Files\expensesByVendorMonth.xml";
             string currentDir = Directory.GetCurrentDirectory();
             string binDir = System.IO.Directory.GetParent(currentDir).FullName;
@@ -52,10 +55,27 @@
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
-            XmlNodeList nodes = root.SelectNodes("vendor"); // You can also use XPath here
-            foreach (XmlNode node in nodes)
+            string RootPath = "/expenses-by-month/vendor";
+            string RootAtribute = "name";
+            string childName = "expenses";
+            string childAtribute = "month";
+          
+            // Just for test that did I extract the XML data correct!!
+
+            XmlNodeList rootNodes = root.SelectNodes(RootPath);
+            foreach (XmlNode vendor in rootNodes)
             {
-                 MessageBox.Show((node.Attributes["name"].Value));
+                var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
+                MessageBox.Show(RootAtributeValue); // remove this
+
+                XmlNodeList childNodes = vendor.SelectNodes(childName);
+                foreach (XmlNode expense in childNodes)
+                {
+                    var childNameValue = expense.Attributes[childAtribute].Value;
+                    var monthExpence = expense.InnerText;
+                    // change with Insert INTO DB
+                    MessageBox.Show(string.Format("{0} {1} : {2} $", childNameValue, childName, monthExpence)); // remove this
+                }
             }
 
             MessageBox.Show("Data loaded from XML file!");
@@ -68,7 +88,8 @@
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("JSON to MongDB Magic !!!");
+            //MessageBox.Show("JSON to MongDB Magic !!!");
+            //DataGeterForJSONReport.
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -93,7 +114,9 @@
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("MS SQL to JSON Magic !!!");
+            // MessageBox.Show("MS SQL to JSON Magic !!!");
+            Window actionPickerWindow = new JsonReport();
+            actionPickerWindow.Show();
         }
     }
 }
