@@ -105,7 +105,8 @@ public class OracleSchemaCreator implements SchemaCreator{
 		String addProductMeasureForeignKey= "ALTER TABLE PRODUCTS ADD CONSTRAINT PRODUCT_MEASURE FOREIGN KEY(MESUREID)REFERENCES MEASURES(ID) ENABLE";
 		String addProductVendorForeignKey = "ALTER TABLE PRODUCTS ADD CONSTRAINT PRODUCT_VENDOR FOREIGN KEY (VENDORID)REFERENCES MEASURES(ID) ENABLE";
 		String createIdIncrementorSequence = "CREATE SEQUENCE ID_INCREMENTOR_SEQ INCREMENT BY 1 MAXVALUE 1111 MINVALUE 1 CACHE 20";
-		
+		String setIdentifiersNon ="ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:NONE'";
+		String setIdentifiersAll ="ALTER SESSION SET PLSCOPE_SETTINGS = 'IDENTIFIERS:ALL'";
 		StringBuilder createTrigerProductIdAutoIncrement = new StringBuilder("create or replace TRIGGER INCREMENT_PRODUCT_ID");
 		createTrigerProductIdAutoIncrement.append(" BEFORE INSERT ON PRODUCTS");
 		createTrigerProductIdAutoIncrement.append(" FOR EACH ROW ");
@@ -119,26 +120,29 @@ public class OracleSchemaCreator implements SchemaCreator{
 		createTrigerMeasureIdAutoIncrement.append(" FOR EACH ROW ");
 		createTrigerMeasureIdAutoIncrement.append("BEGIN :new.ID := ID_INCREMENTOR_SEQ.nextval END ");
 		try (Connection con = DBConector.getOracleConectionInstance();) {
-			if(con.isClosed()){
+		
 			
-			}
 			try (PreparedStatement createMeasurePs = con.prepareStatement(queryCreateMeasureTable.toString());
 					PreparedStatement createVendorPs = con.prepareStatement(queryCreateVendorsTable.toString());
 					PreparedStatement createProductPs = con.prepareStatement(queryCreateProductTable.toString());
 					PreparedStatement addProductMeasureForeignKeyPs = con.prepareStatement(addProductMeasureForeignKey);
 					PreparedStatement addProductVendorForeignKeyPs = con.prepareStatement(addProductVendorForeignKey);
 					PreparedStatement createIdIncrementorSequencePs = con.prepareStatement(createIdIncrementorSequence);
-					Statement createTrigerIdAutoIncrementStatment = con.createStatement()) {
+					Statement createTrigerIdAutoIncrementStatment = con.createStatement();
+					PreparedStatement setIdentifiersNonPs=con.prepareStatement(setIdentifiersNon)) {
 				con.setAutoCommit(false);
+				
 				createMeasurePs.executeUpdate();
 				createVendorPs.executeUpdate();
 				createProductPs.executeUpdate();
 				addProductMeasureForeignKeyPs.executeUpdate();
 				addProductVendorForeignKeyPs.executeUpdate();
 				createIdIncrementorSequencePs.executeUpdate();
+				setIdentifiersNonPs.executeUpdate();
 				createTrigerIdAutoIncrementStatment.executeQuery(createTrigerProductIdAutoIncrement.toString());
 				createTrigerIdAutoIncrementStatment.executeQuery(createTrigerVendorIdAutoIncrement.toString());
 				createTrigerIdAutoIncrementStatment.executeQuery(createTrigerMeasureIdAutoIncrement.toString());
+				createTrigerIdAutoIncrementStatment.execute(setIdentifiersAll);
 				con.commit();
 			} catch (SQLException e) {
 				con.rollback();
