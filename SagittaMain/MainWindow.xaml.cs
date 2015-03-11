@@ -1,4 +1,6 @@
-﻿namespace SagittaMain
+﻿using SagittaMain._5.SQLtoJSON;
+
+namespace SagittaMain
 {
     using System;
     using System.Collections.Generic;
@@ -86,7 +88,8 @@
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("JSON to MongDB Magic !!!");
+            //MessageBox.Show("JSON to MongDB Magic !!!");
+            //DataGeterForJSONReport.
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -111,7 +114,9 @@
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("MS SQL to JSON Magic !!!");
+            // MessageBox.Show("MS SQL to JSON Magic !!!");
+            Window actionPickerWindow = new JsonReport();
+            actionPickerWindow.Show();
         }
     }
 }
