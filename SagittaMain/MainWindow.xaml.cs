@@ -1,4 +1,5 @@
-﻿using SagittaMain._5.SQLtoJSON;
+﻿using System.Diagnostics;
+using System.Reflection;
 
 namespace SagittaMain
 {
@@ -18,6 +19,8 @@ namespace SagittaMain
     using System.Windows.Shapes;
     using System.Xml;
     using System.Xml.Linq;
+
+    using Task5;
     
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -114,9 +117,14 @@ namespace SagittaMain
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            // MessageBox.Show("MS SQL to JSON Magic !!!");
-            Window actionPickerWindow = new JsonReport();
-            actionPickerWindow.Show();
+            var startInfo = new ProcessStartInfo
+            {
+                CreateNoWindow = true, 
+                UseShellExecute = true, 
+                FileName = "Task5.exe"
+            };
+
+            Process.Start(startInfo);            
         }
     }
 }

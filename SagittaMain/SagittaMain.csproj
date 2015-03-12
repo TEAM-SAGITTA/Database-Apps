@@ -67,7 +67,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="5.SQLtoJSON\JsonObject.cs" />
     <Compile Include="5.SQLtoJSON\JsonReport.xaml.cs">
       <DependentUpon>JsonReport.xaml</DependentUpon>
     </Compile>
@@ -140,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Background_back_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Task5\Task5.csproj">
+      <Project>{7209935f-beae-4605-9c12-d775674e938e}</Project>
+      <Name>Task5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
