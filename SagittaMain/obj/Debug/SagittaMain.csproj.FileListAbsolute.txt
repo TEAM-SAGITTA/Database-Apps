@@ -23,3 +23,5 @@ G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.Resources.DbsPics.Resourc
 G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\SagittaMain.exe
 G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\SagittaMain.pdb
 C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.Resources.DbsPics.Resources.resources
+D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.exe
+D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.pdb

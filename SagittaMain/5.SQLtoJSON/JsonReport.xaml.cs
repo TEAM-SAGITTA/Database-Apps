@@ -10,17 +10,25 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 
 namespace SagittaMain._5.SQLtoJSON
 {
     /// <summary>
     /// Interaction logic for JsonReport.xaml
     /// </summary>
+
     public partial class JsonReport : Window
     {
+        const string ConnetionString = "mongodb://localhost";
+        const string DbName = "Reports";
+        private const string ColectionName = "SalesByProductReports";
+
         private DateTime starDate;
         private DateTime endDate;
-        
+
         public JsonReport()
         {
             InitializeComponent();
@@ -74,7 +82,7 @@ namespace SagittaMain._5.SQLtoJSON
                 // MessageBox.Show(calendar.SelectedDate.Value.ToShortDateString());
                 this.StarDate = calendar.SelectedDate.GetValueOrDefault(DateTime.Now);
                 var box = this.FindName("StartDateBox") as TextBox;
-                
+
                 //TODO: Make check for null
                 box.Text = this.StarDate.ToShortDateString();
             }
@@ -102,7 +110,38 @@ namespace SagittaMain._5.SQLtoJSON
 
         private void SendReportButton_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Data are on the serever now!");
+            var client = new MongoClient(ConnetionString);
+            var server = client.GetServer();
+            var db = server.GetDatabase(DbName);
+            var isExist = db.CollectionExists(ColectionName);
+            if (!isExist)
+            {
+                db.CreateCollection(ColectionName);
+            }
+
+            var report = new BsonDocument
+            {
+                {"product-id", 1},
+                {"product-name", "Beer “Zagorka”"},
+                {"vendor-name", "Zagorka Corp."},
+                {"total-quantity-sold", 673},
+                {"total-incomes", 609.24}
+            };
+
+            var reports = db.GetCollection(ColectionName);
+            // If document exist change field values else create document
+            var rep = reports.FindOne(Query.EQ("product-id", 1));
+            if (rep == null)
+            {
+                reports.Insert(report);
+            }
+            else
+            {
+                //TODO: Set only new values without make new document
+                //                rep["total-incomes"] = 10;
+                //                reports.Save(rep);
+            }
+
         }
     }
 }
