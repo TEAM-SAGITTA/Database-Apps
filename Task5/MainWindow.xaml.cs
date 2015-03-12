@@ -21,18 +21,11 @@ using MongoDB.Driver;
 
 namespace Task5
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        const string ConnetionString = "mongodb://localhost";
-        const string DbName = "Reports";
-        private const string ColectionName = "SalesByProductReports";
-        private const string Dbpath = @"c:\data\db";
-
         private DateTime starDate = DateTime.Now;
         private DateTime endDate = DateTime.Now;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -121,30 +114,50 @@ namespace Task5
                 {"total-incomes", 700.24}
             };
 
-            if (!Directory.Exists(@"c:\reports"))
+            if (!Directory.Exists(Constants.ReportsFolder))
             {
-                Directory.CreateDirectory(@"c:\reports");
+                Directory.CreateDirectory(Constants.ReportsFolder);
             }
 
-            string destination = string.Format("c:\\reports\\{0}_[{1}__{2}].json", report["product-id"], this.starDate.ToShortDateString(), endDate.ToShortDateString());
+            string dateFolder = string.Format("{0}\\{1}",
+                Constants.ReportsFolder,
+                DateTime.Now.ToShortDateString().Replace('-', '_'));
+            string destinationFolder = string.Format("{0}\\{1}",
+                    dateFolder,
+                    DateTime.Now.ToLongTimeString().Replace(':', '_'));
+            if (!Directory.Exists(dateFolder))
+            {
+                Directory.CreateDirectory(dateFolder);
+
+            }
+
+            Directory.CreateDirectory(destinationFolder);
+            string destination = string.Format("{0}\\{1}.json",
+                destinationFolder,
+                report["product-id"]);
             File.WriteAllText(@destination, report.ToJson(
-                new JsonWriterSettings { OutputMode = JsonOutputMode.Strict }));
+                new JsonWriterSettings
+                {
+                    OutputMode = JsonOutputMode.Strict
+                }));
             MessageBox.Show("Reports are done!");
         }
 
         private Process StartMongoServer()
         {
-            if (!Directory.Exists(Dbpath))
+            if (!Directory.Exists(Constants.Dbpath))
             {
-                Directory.CreateDirectory(Dbpath);
+                Directory.CreateDirectory(Constants.Dbpath);
             }
 
-            var startInfo = new ProcessStartInfo();
-            //startInfo.CreateNoWindow = true;
-            startInfo.UseShellExecute = true;
-            startInfo.FileName = "mongod.exe";
-            startInfo.Arguments = "--dbpath " + Dbpath;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            var startInfo = new ProcessStartInfo
+            {
+                UseShellExecute = true,
+                FileName = "mongod.exe",
+                Arguments = "--dbpath " + Constants.Dbpath,
+                WindowStyle = ProcessWindowStyle.Hidden
+            };
+
             return Process.Start(startInfo);
         }
 
@@ -154,29 +167,33 @@ namespace Task5
             SendReportToMongo(process);
         }
 
-        private static void SendReportToMongo(Process process)
+        private void SendReportToMongo(Process process)
         {
             try
             {
-                var client = new MongoClient(ConnetionString);
+                var client = new MongoClient(Constants.ConnetionString);
                 var server = client.GetServer();
-                var db = server.GetDatabase(DbName);
-                var isExist = db.CollectionExists(ColectionName);
-                if (!isExist)
+                var db = server.GetDatabase(Constants.DbName);
+                var collectionName = string.Format("{0}_{1}_{2}",
+                    Constants.BaseColectionName,
+                    this.starDate.ToShortDateString().Replace('-', '_'),
+                    this.endDate.ToShortDateString().Replace('-', '_'));
+                var isCollectionExist = db.CollectionExists(collectionName);
+                if (!isCollectionExist)
                 {
-                    db.CreateCollection(ColectionName);
+                    db.CreateCollection(collectionName);
                 }
 
                 var report = new BsonDocument
-            {
-                {"product-id", 3},
-                {"product-name", "Beer “Zagorka”"},
-                {"vendor-name", "Zagorka Corp."},
-                {"total-quantity-sold", 673},
-                {"total-incomes", 609.24}
-            };
+                {
+                    {"product-id", 3},
+                    {"product-name", "Beer “Zagorka”"},
+                    {"vendor-name", "Zagorka Corp."},
+                    {"total-quantity-sold", 673},
+                    {"total-incomes", 609.24}
+                };
 
-                var reports = db.GetCollection(ColectionName);
+                var reports = db.GetCollection(collectionName);
                 reports.Insert(report);
                 // If document exist change field values else create document
                 //            var rep = reports.FindOne(Query.EQ("product-id", ));
@@ -193,15 +210,13 @@ namespace Task5
 
                 // This kill mongod.exe procces
                 Thread.Sleep(5000);
-                process.Kill();
-
+                //                process.Kill();
                 MessageBox.Show("Your data are on the server now!");
             }
             catch (Exception)
             {
                 MessageBox.Show("We have problem with connection! Please try again later!");
             }
-            
         }
     }
 }
