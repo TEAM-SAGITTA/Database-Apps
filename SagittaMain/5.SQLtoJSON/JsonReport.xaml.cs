@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -27,6 +29,7 @@ namespace SagittaMain._5.SQLtoJSON
         const string ConnetionString = "mongodb://localhost";
         const string DbName = "Reports";
         private const string ColectionName = "SalesByProductReports";
+        private const string Dbpath = @"c:\data\db";
 
         private DateTime starDate = DateTime.Now;
         private DateTime endDate = DateTime.Now;
@@ -131,7 +134,28 @@ namespace SagittaMain._5.SQLtoJSON
             MessageBox.Show("Reports are done!");
         }
 
+        private Process StartMongoServer()
+        {
+            if (!Directory.Exists(Dbpath))
+            {
+                Directory.CreateDirectory(Dbpath);
+            }
+            
+            var startInfo = new ProcessStartInfo();
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = true;
+            startInfo.FileName = "mongod.exe";
+            startInfo.Arguments = "--dbpath " + Dbpath;
+            return Process.Start(startInfo);
+        }
+
         private void SendReportButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            var process = StartMongoServer();
+            SendReportToMongo(process);
+        }
+
+        private static void SendReportToMongo(Process process)
         {
             var client = new MongoClient(ConnetionString);
             var server = client.GetServer();
@@ -144,7 +168,7 @@ namespace SagittaMain._5.SQLtoJSON
 
             var report = new BsonDocument
             {
-                {"product-id", 1},
+                {"product-id", 3},
                 {"product-name", "Beer “Zagorka”"},
                 {"vendor-name", "Zagorka Corp."},
                 {"total-quantity-sold", 673},
@@ -152,19 +176,23 @@ namespace SagittaMain._5.SQLtoJSON
             };
 
             var reports = db.GetCollection(ColectionName);
+            reports.Insert(report);
             // If document exist change field values else create document
-            var rep = reports.FindOne(Query.EQ("product-id", 1));
-            if (rep == null)
-            {
-                reports.Insert(report);
-            }
-            else
-            {
-                //TODO: Set only new values without make new document
-                //                rep["total-incomes"] = 10;
-                //                reports.Save(rep);
-            }
+//            var rep = reports.FindOne(Query.EQ("product-id", ));
+//            if (rep == null)
+//            {
+//                reports.Insert(report);
+//            }
+//            else
+//            {
+//                //TODO: Set only new values without make new document
+//                //                rep["total-incomes"] = 10;
+//                //                reports.Save(rep);
+//            }
 
+            // This kill mongod.exe procces
+            Thread.Sleep(5000);
+            process.Kill();
         }
     }
 }
