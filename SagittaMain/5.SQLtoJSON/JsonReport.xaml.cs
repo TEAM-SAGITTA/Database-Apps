@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -11,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 
@@ -26,8 +28,8 @@ namespace SagittaMain._5.SQLtoJSON
         const string DbName = "Reports";
         private const string ColectionName = "SalesByProductReports";
 
-        private DateTime starDate;
-        private DateTime endDate;
+        private DateTime starDate = DateTime.Now;
+        private DateTime endDate = DateTime.Now;
 
         public JsonReport()
         {
@@ -105,7 +107,28 @@ namespace SagittaMain._5.SQLtoJSON
 
         private void MakeReportButton_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Report compleated!");
+            // TODO: When db is redy
+            // Get all data from sql server. With foreach meake report for all products in given period
+
+            var report = new BsonDocument
+            {
+                {"product-id", 1},
+                {"product-name", "Beer “Zagorka”"},
+                {"vendor-name", "Zagorka Corp."},
+                {"total-quantity-sold", 673},
+                {"total-incomes", 609.24}
+                
+            };
+
+            if (!Directory.Exists(@"c:\reports"))
+            {
+                Directory.CreateDirectory(@"c:\reports");
+            }
+            
+            string destination = string.Format("c:\\reports\\{0}_[{1}__{2}].json", report["product-id"], this.starDate.ToShortDateString(),  endDate.ToShortDateString());
+            File.WriteAllText(@destination, report.ToJson(
+                new JsonWriterSettings { OutputMode = JsonOutputMode.Strict }));
+            MessageBox.Show("Reports are done!");
         }
 
         private void SendReportButton_OnClick(object sender, RoutedEventArgs e)
