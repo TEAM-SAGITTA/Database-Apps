@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SqlClient;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -44,12 +45,18 @@
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
-            // Should be made a class that holds the button methods!
+            //TODO change the connection string, Test DB is on my pc 
+            string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
+            string firstTableName = "Test10"; // can be direct parameter in the method
+            string secondTableName = "Test2"; // can be direct parameter in the method
+            
+            CreateSqlServerTables(DbConnectionString, firstTableName, secondTableName);
+
             string fileDirectoryName = @"\Files\expensesByVendorMonth.xml";
             string currentDir = Directory.GetCurrentDirectory();
             string binDir = System.IO.Directory.GetParent(currentDir).FullName;
             string filePath = System.IO.Directory.GetParent(binDir).FullName + fileDirectoryName;
-                        
+
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
@@ -57,27 +64,31 @@
             string RootAtribute = "name";
             string childName = "expenses";
             string childAtribute = "month";
+            XmlNodeList rootNodes = root.SelectNodes(RootPath);
+
           
             // Just for test that did I extract the XML data correct!!
 
-            XmlNodeList rootNodes = root.SelectNodes(RootPath);
-            foreach (XmlNode vendor in rootNodes)
-            {
-                var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
-                MessageBox.Show(RootAtributeValue); // remove this
+            
+            //foreach (XmlNode vendor in rootNodes)
+            //{
+            //    var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
+            //    MessageBox.Show(RootAtributeValue); // remove this
 
-                XmlNodeList childNodes = vendor.SelectNodes(childName);
-                foreach (XmlNode expense in childNodes)
-                {
-                    var childNameValue = expense.Attributes[childAtribute].Value;
-                    var monthExpence = expense.InnerText;
-                    // change with Insert INTO DB
-                    MessageBox.Show(string.Format("{0} {1} : {2} $", childNameValue, childName, monthExpence)); // remove this
-                }
-            }
+            //    XmlNodeList childNodes = vendor.SelectNodes(childName);
+            //    foreach (XmlNode expense in childNodes)
+            //    {
+            //        var childNameValue = expense.Attributes[childAtribute].Value;
+            //        var monthExpence = expense.InnerText;
+            //        // change with Insert INTO DB
+            //        MessageBox.Show(string.Format("{0} {1} : {2} $", childNameValue, childName, monthExpence)); // remove this
+            //    }
+            //}
 
             MessageBox.Show("Data loaded from XML file!");
         }
+
+
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -112,6 +123,32 @@
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("MS SQL to JSON Magic !!!");
+        }
+
+        private static void CreateSqlServerTables(string DbConnectionString, string firstTableName, string secondTableName)
+        {
+
+            string createFirstTableStr = string.Format(
+                "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
+                "(Id  int IDENTITY(1,1) PRIMARY KEY, CompanyName varchar(max))",
+                firstTableName);
+
+            string createSecondTableStr = string.Format(
+                "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
+                "(Id  int IDENTITY(1,1) PRIMARY KEY, Month varchar(max)," +
+                "CompanyNameId int, Expenses FLOAT)", secondTableName);
+
+
+            using (SqlConnection connection = new SqlConnection(DbConnectionString))
+            {
+                SqlCommand createFirstTable = new SqlCommand(createFirstTableStr, connection);
+                connection.Open();
+                createFirstTable.ExecuteNonQuery();
+
+                SqlCommand createSecondTable = new SqlCommand(createSecondTableStr, connection);
+                createSecondTable.ExecuteNonQuery();
+                connection.Close();
+            }
         }
     }
 }
