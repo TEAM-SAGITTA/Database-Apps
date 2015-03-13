@@ -67,3 +67,15 @@ G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\Task5.exe
 G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\Task5.pdb
 G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Bson.xml
 G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Driver.xml
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\obj\Debug\SagittaMain.csprojResolveAssemblyReference.cache
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\SagittaMain.exe.config
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\08.SQLite_And_MySQL_ToExcel.dll
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\MongoDB.Bson.dll
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\MongoDB.Driver.dll
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\System.Data.SQLite.dll
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\Task5.exe
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\08.SQLite_And_MySQL_ToExcel.pdb
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\Task5.pdb
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\MongoDB.Bson.xml
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\MongoDB.Driver.xml
+C:\Users\SESA29880\Documents\Projects\_SoftUni-DB\GitHub\Database-Apps\SagittaMain\bin\Debug\System.Data.SQLite.pdb
