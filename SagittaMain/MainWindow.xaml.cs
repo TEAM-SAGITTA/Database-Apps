@@ -22,11 +22,6 @@ namespace SagittaMain
     using System.Xml.Linq;
     using System.Data.SQLite;
 
-    using Task5;
-
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -53,8 +48,8 @@ namespace SagittaMain
         {
             //TODO change the connection string, Test DB is on my pc
             string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
-            string firstTableName = "Test10"; // can be direct parameter in the method
-            string secondTableName = "Test2"; // can be direct parameter in the method
+            string firstTableName = "Test100"; // can be direct parameter in the method
+            string secondTableName = "Test200"; // can be direct parameter in the method
 
             CreateSqlServerTables(DbConnectionString, firstTableName, secondTableName);
 
@@ -148,7 +143,7 @@ namespace SagittaMain
             {
                 CreateNoWindow = true,
                 UseShellExecute = true,
-                FileName = "Task5.exe"
+                FileName = "Task5.exe" //TODO remove comment I got an exeption
             };
 
             Process.Start(startInfo);
@@ -156,22 +151,26 @@ namespace SagittaMain
 
         private static void CreateSqlServerTables(string DbConnectionString, string firstTableName, string secondTableName)
         {
+            string dropConstraintStr = string.Format("IF OBJECT_ID('{0}') IS NOT NULL ALTER TABLE {0} DROP CONSTRAINT FK_CompanyNameId;", secondTableName);
 
             string createFirstTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
-                "(Id  int IDENTITY(1,1) PRIMARY KEY, CompanyName varchar(max))",
+                "(CompanyNameId  int IDENTITY(1,1) PRIMARY KEY, CompanyName varchar(max))",
                 firstTableName);
 
             string createSecondTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
-                "(Id  int IDENTITY(1,1) PRIMARY KEY, Month varchar(max)," +
-                "CompanyNameId int, Expenses FLOAT)", secondTableName);
-
+                "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenceDate varchar(max)," +
+                "CompanyNameId int, Expenses FLOAT," +
+                "CONSTRAINT FK_CompanyNameId FOREIGN KEY (CompanyNameId) REFERENCES {1}(CompanyNameId) ON DELETE SET NULL)", secondTableName, firstTableName);
 
             using (SqlConnection connection = new SqlConnection(DbConnectionString))
             {
-                SqlCommand createFirstTable = new SqlCommand(createFirstTableStr, connection);
                 connection.Open();
+                SqlCommand dropConstraint = new SqlCommand(dropConstraintStr, connection);
+                dropConstraint.ExecuteNonQuery();
+
+                SqlCommand createFirstTable = new SqlCommand(createFirstTableStr, connection);
                 createFirstTable.ExecuteNonQuery();
 
                 SqlCommand createSecondTable = new SqlCommand(createSecondTableStr, connection);
