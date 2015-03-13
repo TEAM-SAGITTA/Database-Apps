@@ -20,6 +20,7 @@ namespace SagittaMain
     using System.Windows.Shapes;
     using System.Xml;
     using System.Xml.Linq;
+    using System.Data.SQLite;
 
     using Task5;
 
@@ -123,7 +124,22 @@ namespace SagittaMain
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("SQLite to Excel Magic !!!");
+            const string connectionString = @"DataSource = ..\..\..\08.SQLite_And_MySQL_ToExcel\Data\Product.db; Version = 3";
+            using (SQLiteConnection con = new SQLiteConnection(connectionString) )
+            {
+                try
+                {
+                    con.Open();
+                    if (con.State == System.Data.ConnectionState.Open)
+                    {
+                        MessageBox.Show("SQLite is connected");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void Button_Click_9(object sender, RoutedEventArgs e)

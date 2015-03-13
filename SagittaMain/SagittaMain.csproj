@@ -134,6 +134,10 @@
     <Resource Include="Resources\Background_back_up.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\08.SQLite_And_MySQL_ToExcel\08.SQLite_And_MySQL_ToExcel.csproj">
+      <Project>{1732efce-a351-46e1-b68b-7d4101eb7968}</Project>
+      <Name>08.SQLite_And_MySQL_ToExcel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
       <Project>{7209935f-beae-4605-9c12-d775674e938e}</Project>
       <Name>Task5</Name>
