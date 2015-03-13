@@ -1,4 +1,7 @@
-﻿namespace SagittaMain
+﻿using System.Diagnostics;
+using System.Reflection;
+
+namespace SagittaMain
 {
     using System;
     using System.Collections.Generic;
@@ -17,7 +20,9 @@
     using System.Windows.Shapes;
     using System.Xml;
     using System.Xml.Linq;
-    
+
+    using Task5;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -45,11 +50,11 @@
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
-            //TODO change the connection string, Test DB is on my pc 
+            //TODO change the connection string, Test DB is on my pc
             string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
             string firstTableName = "Test10"; // can be direct parameter in the method
             string secondTableName = "Test2"; // can be direct parameter in the method
-            
+
             CreateSqlServerTables(DbConnectionString, firstTableName, secondTableName);
 
             string fileDirectoryName = @"\Files\expensesByVendorMonth.xml";
@@ -66,10 +71,10 @@
             string childAtribute = "month";
             XmlNodeList rootNodes = root.SelectNodes(RootPath);
 
-          
+
             // Just for test that did I extract the XML data correct!!
 
-            
+
             //foreach (XmlNode vendor in rootNodes)
             //{
             //    var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
@@ -97,7 +102,8 @@
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("JSON to MongDB Magic !!!");
+            //MessageBox.Show("JSON to MongDB Magic !!!");
+            //DataGeterForJSONReport.
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -122,7 +128,14 @@
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("MS SQL to JSON Magic !!!");
+            var startInfo = new ProcessStartInfo
+            {
+                CreateNoWindow = true,
+                UseShellExecute = true,
+                FileName = "Task5.exe"
+            };
+
+            Process.Start(startInfo);
         }
 
         private static void CreateSqlServerTables(string DbConnectionString, string firstTableName, string secondTableName)
