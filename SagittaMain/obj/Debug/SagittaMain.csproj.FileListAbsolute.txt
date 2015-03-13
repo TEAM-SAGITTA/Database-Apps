@@ -60,3 +60,10 @@ D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain.g.res
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain.Properties.Resources.resources
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain.Resources.DbsPics.Resources.resources
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain.csproj.GenerateResource.Cache
+G:\SotUni\TeamWorkDB\SagittaMain\obj\Debug\SagittaMain.csprojResolveAssemblyReference.cache
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Bson.dll
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Driver.dll
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\Task5.exe
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\Task5.pdb
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Bson.xml
+G:\SotUni\TeamWorkDB\SagittaMain\bin\Debug\MongoDB.Driver.xml
