@@ -53,9 +53,7 @@ D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\bin\Debug\Task5.pdb
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\bin\Debug\MongoDB.Bson.xml
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\bin\Debug\MongoDB.Driver.xml
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain.csprojResolveAssemblyReference.cache
-D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\5.SQLtoJSON\JsonReport.baml
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\MainWindow.baml
-D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\5.SQLtoJSON\JsonReport.g.cs
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\MainWindow.g.cs
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\App.g.cs
 D:\SoftUni\TeamWork\Databases\GitHubRepo\SagittaMain\obj\Debug\SagittaMain_MarkupCompile.cache

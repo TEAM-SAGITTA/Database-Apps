@@ -208,14 +208,18 @@ namespace Task5
                 //                //                reports.Save(rep);
                 //            }
 
-                // This kill mongod.exe procces
+               
                 Thread.Sleep(5000);
-                process.Kill();
                 MessageBox.Show("Your data are on the server now!");
             }
             catch (Exception)
             {
                 MessageBox.Show("We have problem with connection! Please try again later!");
+            }
+            finally
+            {
+                // This kill mongod.exe procces
+                process.Kill();
             }
             
         }
