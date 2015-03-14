@@ -15,3 +15,9 @@ D:\SoftUni\TeamWork\Databases\GitHubRepo\TestingCSharpCode\bin\Debug\TestingCSha
 D:\SoftUni\TeamWork\Databases\GitHubRepo\TestingCSharpCode\obj\Debug\TestingCSharpCode.csprojResolveAssemblyReference.cache
 D:\SoftUni\TeamWork\Databases\GitHubRepo\TestingCSharpCode\obj\Debug\TestingCSharpCode.exe
 D:\SoftUni\TeamWork\Databases\GitHubRepo\TestingCSharpCode\obj\Debug\TestingCSharpCode.pdb
+G:\SotUni\teamProject\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe.config
+G:\SotUni\teamProject\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.exe
+G:\SotUni\teamProject\Database-Apps\TestingCSharpCode\bin\Debug\TestingCSharpCode.pdb
+G:\SotUni\teamProject\Database-Apps\TestingCSharpCode\obj\Debug\TestingCSharpCode.exe
+G:\SotUni\teamProject\Database-Apps\TestingCSharpCode\obj\Debug\TestingCSharpCode.pdb
+G:\SotUni\TeamProject\Database-Apps\TestingCSharpCode\obj\Debug\TestingCSharpCode.csprojResolveAssemblyReference.cache
