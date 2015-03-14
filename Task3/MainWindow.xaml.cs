@@ -1,23 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data.Entity;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace Task3
+﻿namespace Task3
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.SqlClient;
+    using System.Data.Entity;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
+    using System.Windows.Shapes;
+
+    using iTextSharp.text;
+    using iTextSharp.text.pdf;
+    using System.Data;
+    using System.Diagnostics;
+    using System.Configuration;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -102,20 +108,43 @@ namespace Task3
 
         private void MakePdfReportButton_OnClick(object sender, EventArgs e)
         {
-            using (TeamWorkEntities cn = new TeamWorkEntities())
+            DataRow dr = GetData("SELECT * FROM Employees where EmployeeId = " + ddlEmployees.SelectedItem.Value).Rows[0]; ;
+            Document document = new Document(PageSize.A4, 88f, 88f, 10f, 10f);
+            Font NormalFont = FontFactory.GetFont("Arial", 12, Font.NORMAL, Color.BLACK);
+
+            using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
             {
-               
-                FileStream fStream = File.OpenRead("E:\\MyFiles\\TempReport.pdf");
-                byte[] contents = new byte[fStream.Length];
-                fStream.Read(contents, 0, (int)fStream.Length);
-                fStream.Close();
-                using (SqlCommand cmd = new SqlCommand("insert into SavePDFTable " + "(PDFFile)values(@data)"))
-                {
-                    cmd.Parameters.Add("@data", contents);
-                    cmd.ExecuteNonQuery();
-                    Console.Write("Pdf File Save in Dab");
-                }
+                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                Phrase phrase = null;
+                PdfPCell cell = null;
+                PdfPTable table = null;
+                Color color = null;
+
+                document.Open();
+
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
+                Response.ContentType = "application/pdf";
+                Response.Buffer = true;
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.BinaryWrite(bytes);
+                Response.End();
+                Response.Close();
             }
+            //using (TeamWorkEntities cn = new TeamWorkEntities())
+            //{
+               
+            //    FileStream fStream = File.OpenRead("E:\\MyFiles\\TempReport.pdf");
+            //    byte[] contents = new byte[fStream.Length];
+            //    fStream.Read(contents, 0, (int)fStream.Length);
+            //    fStream.Close();
+            //    using (SqlCommand cmd = new SqlCommand("insert into SavePDFTable " + "(PDFFile)values(@data)"))
+            //    {
+            //        cmd.Parameters.Add("@data", contents);
+            //        cmd.ExecuteNonQuery();
+            //        Console.Write("Pdf File Save in Dab");
+            //    }
+            //}
 
           
         }
