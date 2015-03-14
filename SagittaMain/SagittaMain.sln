@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.SQLite_And_MySQL_ToExcel", "..\08.SQLite_And_MySQL_ToExcel\08.SQLite_And_MySQL_ToExcel.csproj", "{1732EFCE-A351-46E1-B68B-7D4101EB7968}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.XML_SalesReport", "..\04.XML_SalesReport\04.XML_SalesReport.csproj", "{4998181B-67F5-4F3B-87D6-455A021571E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4998181B-67F5-4F3B-87D6-455A021571E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4998181B-67F5-4F3B-87D6-455A021571E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4998181B-67F5-4F3B-87D6-455A021571E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4998181B-67F5-4F3B-87D6-455A021571E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
