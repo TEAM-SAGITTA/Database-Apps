@@ -18,11 +18,13 @@ using System.Windows.Shapes;
 using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Driver;
+//using MSSql.Data;
 
 namespace Task5
 {
     public partial class MainWindow : Window
     {
+//        private SagittaDBEntities db = new SagittaDBEntities();
         private DateTime starDate = DateTime.Now;
         private DateTime endDate = DateTime.Now;
 

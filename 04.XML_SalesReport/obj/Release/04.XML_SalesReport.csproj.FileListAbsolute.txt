@@ -1,0 +1,5 @@
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\04.XML_SalesReport.pdb
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb

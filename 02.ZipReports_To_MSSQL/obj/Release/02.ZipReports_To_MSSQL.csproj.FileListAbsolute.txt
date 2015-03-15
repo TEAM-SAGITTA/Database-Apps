@@ -1,0 +1,5 @@
+D:\SoftUni\TeamWork\Databases\GitRepo\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.pdb
+D:\SoftUni\TeamWork\Databases\GitRepo\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
+D:\SoftUni\TeamWork\Databases\GitRepo\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb

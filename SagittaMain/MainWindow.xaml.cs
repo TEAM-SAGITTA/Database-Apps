@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Data.Entity;
+using System.Diagnostics;
 using System.Reflection;
 
 namespace SagittaMain
@@ -107,8 +108,8 @@ namespace SagittaMain
         {
             using (var db = new TaxEntities())
             {
-                var first = db.Products.FirstOrDefault();
-                MessageBox.Show(first.ProductName);
+                var a = db.Products.ToList();
+                MessageBox.Show(a[0].ProductName);
             }
 //            const string connectionString = @"DataSource = ..\..\..\08.SQLite_And_MySQL_ToExcel\Data\Product.db; Version = 3";
 //            using (SQLiteConnection con = new SQLiteConnection(connectionString))
