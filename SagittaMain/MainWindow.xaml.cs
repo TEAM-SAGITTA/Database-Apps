@@ -105,22 +105,27 @@ namespace SagittaMain
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            const string connectionString = @"DataSource = ..\..\..\08.SQLite_And_MySQL_ToExcel\Data\Product.db; Version = 3";
-            using (SQLiteConnection con = new SQLiteConnection(connectionString))
+            using (var db = new TaxEntities())
             {
-                try
-                {
-                    con.Open();
-                    if (con.State == System.Data.ConnectionState.Open)
-                    {
-                        MessageBox.Show("SQLite is connected");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                var first = db.Products.FirstOrDefault();
+                MessageBox.Show(first.ProductName);
             }
+//            const string connectionString = @"DataSource = ..\..\..\08.SQLite_And_MySQL_ToExcel\Data\Product.db; Version = 3";
+//            using (SQLiteConnection con = new SQLiteConnection(connectionString))
+//            {
+//                try
+//                {
+//                    con.Open();
+//                    if (con.State == System.Data.ConnectionState.Open)
+//                    {
+//                        MessageBox.Show("SQLite is connected");
+//                    }
+//                }
+//                catch (Exception ex)
+//                {
+//                    MessageBox.Show(ex.Message);
+//                }
+//            }
         }
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
