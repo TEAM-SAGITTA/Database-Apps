@@ -17,6 +17,7 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Navigation;
     using System.Windows.Shapes;
+    using System.Web;
 
     using iTextSharp.text;
     using iTextSharp.text.pdf;
@@ -108,9 +109,12 @@
 
         private void MakePdfReportButton_OnClick(object sender, EventArgs e)
         {
-            DataRow dr = GetData("SELECT * FROM Employees where EmployeeId = " + ddlEmployees.SelectedItem.Value).Rows[0]; ;
+            var db = new TeamWorkEntities();
+            var dbProductEntities = db.Products;
+            //SqlCommand allProducts = new SqlCommand("SELECT * FROM Products", db);
+            DataRow dr = GetData("SELECT * FROM Products where VendorId = 10").Rows[0];
             Document document = new Document(PageSize.A4, 88f, 88f, 10f, 10f);
-            Font NormalFont = FontFactory.GetFont("Arial", 12, Font.NORMAL, Color.BLACK);
+            Font NormalFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
 
             using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
             {
@@ -118,18 +122,18 @@
                 Phrase phrase = null;
                 PdfPCell cell = null;
                 PdfPTable table = null;
-                Color color = null;
+                //Color color = null;
 
                 document.Open();
 
-                Response.ContentType = "application/pdf";
-                Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
-                Response.ContentType = "application/pdf";
-                Response.Buffer = true;
-                Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                Response.BinaryWrite(bytes);
-                Response.End();
-                Response.Close();
+                HttpContext.Current.Response.ContentType = "application/pdf";
+                HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
+                HttpContext.Current.Response.ContentType = "application/pdf";
+                HttpContext.Current.Response.Buffer = true;
+                HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+               // HttpContext.Current.Response.BinaryWrite();
+                HttpContext.Current.Response.End();
+                HttpContext.Current.Response.Close();
             }
             //using (TeamWorkEntities cn = new TeamWorkEntities())
             //{
@@ -147,6 +151,27 @@
             //}
 
           
+        }
+
+        private DataTable GetData(string query)
+        {
+            string conString = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+
+            SqlCommand cmd = new SqlCommand(query);
+            using (SqlConnection con = new SqlConnection(conString))
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmd.Connection = con;
+
+                    sda.SelectCommand = cmd;
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
         }
 
     }
