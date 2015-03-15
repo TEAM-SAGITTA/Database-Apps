@@ -28,3 +28,6 @@ D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.Resource
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.csproj.GenerateResource.Cache
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.exe
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Debug\SagittaMain.pdb
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\SagittaMain\bin\Debug\SagittaMain.exe.config
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\SagittaMain\obj\Debug\SagittaMain.exe
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\SagittaMain\obj\Debug\SagittaMain.pdb
