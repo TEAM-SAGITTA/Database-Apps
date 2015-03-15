@@ -1,5 +1,0 @@
-D:\SoftUni\TeamWork\Databases\GitRepo\08.SQLite_And_MySQL_ToExcel\bin\Debug\08.SQLite_And_MySQL_ToExcel.dll
-D:\SoftUni\TeamWork\Databases\GitRepo\08.SQLite_And_MySQL_ToExcel\bin\Debug\08.SQLite_And_MySQL_ToExcel.pdb
-D:\SoftUni\TeamWork\Databases\GitRepo\08.SQLite_And_MySQL_ToExcel\obj\Debug\08.SQLite_And_MySQL_ToExcel.csprojResolveAssemblyReference.cache
-D:\SoftUni\TeamWork\Databases\GitRepo\08.SQLite_And_MySQL_ToExcel\obj\Debug\08.SQLite_And_MySQL_ToExcel.dll
-D:\SoftUni\TeamWork\Databases\GitRepo\08.SQLite_And_MySQL_ToExcel\obj\Debug\08.SQLite_And_MySQL_ToExcel.pdb
