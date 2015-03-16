@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ceae27e42b146b38f644c79e75e1fbf" Name="Diagram1">
+        <EntityTypeShape EntityType="SagittaDBModel.Measure" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SagittaDBModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SagittaDBModel.SalesReport" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SagittaDBModel.Supermarket" Width="1.5" PointX="7.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SagittaDBModel.Vendor" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="SagittaDBModel.FK_Product_Measure" ManuallyRouted="false" />
+        <AssociationConnector Association="SagittaDBModel.FK_Product_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="SagittaDBModel.FK_SalesReports_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SagittaDBModel.FK_SalesReports_Supermarkets" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

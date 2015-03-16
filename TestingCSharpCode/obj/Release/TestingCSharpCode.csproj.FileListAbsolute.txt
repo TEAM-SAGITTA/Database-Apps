@@ -4,3 +4,15 @@ D:\SoftUni\TeamWork\Databases\GitRepo\TestingCSharpCode\bin\Release\TestingCShar
 D:\SoftUni\TeamWork\Databases\GitRepo\TestingCSharpCode\obj\Release\TestingCSharpCode.csprojResolveAssemblyReference.cache
 D:\SoftUni\TeamWork\Databases\GitRepo\TestingCSharpCode\obj\Release\TestingCSharpCode.exe
 D:\SoftUni\TeamWork\Databases\GitRepo\TestingCSharpCode\obj\Release\TestingCSharpCode.pdb
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\bin\Release\TestingCSharpCode.exe.config
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\bin\Release\TestingCSharpCode.exe
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\bin\Release\TestingCSharpCode.pdb
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\obj\Release\TestingCSharpCode.csprojResolveAssemblyReference.cache
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\obj\Release\TestingCSharpCode.exe
+C:\Users\Joro\Desktop\Database-Apps.git\trunk\TestingCSharpCode\obj\Release\TestingCSharpCode.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\bin\Release\TestingCSharpCode.exe.config
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\bin\Release\TestingCSharpCode.exe
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\bin\Release\TestingCSharpCode.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.csprojResolveAssemblyReference.cache
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.exe
+C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.pdb

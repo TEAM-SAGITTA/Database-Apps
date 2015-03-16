@@ -140,7 +140,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\DbsPics\Resources.resx" />
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -201,6 +203,10 @@
     <Resource Include="Resources\Background_back_up.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\02.ZipReports_To_MSSQL\02.ZipReports_To_MSSQL.csproj">
+      <Project>{6269bd12-eb21-4681-846b-fe9143fb4941}</Project>
+      <Name>02.ZipReports_To_MSSQL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
       <Project>{7209935f-beae-4605-9c12-d775674e938e}</Project>
       <Name>Task5</Name>
