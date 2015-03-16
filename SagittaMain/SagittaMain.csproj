@@ -93,6 +93,9 @@
     <Compile Include="Product.cs">
       <DependentUpon>TaxDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Task5Window.xaml.cs">
+      <DependentUpon>Task5Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaxDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +123,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Task5Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -207,8 +214,12 @@
       <Project>{6269bd12-eb21-4681-846b-fe9143fb4941}</Project>
       <Name>02.ZipReports_To_MSSQL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MSSql.Data\MSSql.Data.csproj">
+      <Project>{DB961331-3A87-4714-9928-4C78365C6A31}</Project>
+      <Name>MSSql.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
-      <Project>{7209935f-beae-4605-9c12-d775674e938e}</Project>
+      <Project>{673A32D9-90A8-4FEE-987D-18466DC7F3A5}</Project>
       <Name>Task5</Name>
     </ProjectReference>
   </ItemGroup>

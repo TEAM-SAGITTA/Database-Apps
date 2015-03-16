@@ -1,7 +1,7 @@
-﻿<Window x:Class="Task5.MainWindow"
+﻿<Window x:Class="SagittaMain.Task5Window"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="JsonReport" Height="337.5" Width="516.177">
+                Title="JsonReport" Height="337.5" Width="516.177">
     <Grid>
         <Calendar Margin="0,10,292,89" HorizontalAlignment="Right" Width="177" Name="ReportStartDate" SelectedDatesChanged="ReportStartDate_OnSelectedDatesChanged"></Calendar>
         <Calendar Margin="296,10,36,89" Name="ReportEndDate" SelectedDatesChanged="ReportEndDate_OnSelectedDatesChanged"></Calendar>

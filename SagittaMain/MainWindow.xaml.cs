@@ -133,14 +133,8 @@
 
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            var startInfo = new ProcessStartInfo
-            {
-                CreateNoWindow = true,
-                UseShellExecute = true,
-                FileName = "Task5.exe"
-            };
-
-            Process.Start(startInfo);
+            var window = new Task5Window();
+            window.Show();
         }
 
         private static void DropCreateSqlServerTables(

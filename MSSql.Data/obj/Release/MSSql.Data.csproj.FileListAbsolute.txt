@@ -28,3 +28,13 @@ C:\Users\Joro\Desktop\Team\Database-Apps\MSSql.Data\bin\Release\EntityFramework.
 C:\Users\Joro\Desktop\Team\Database-Apps\MSSql.Data\obj\Release\MSSql.Data.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\MSSql.Data\obj\Release\MSSql.Data.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\MSSql.Data\obj\Release\MSSql.Data.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\MSSql.Data.dll.config
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\MSSql.Data.dll
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\MSSql.Data.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\EntityFramework.dll
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\EntityFramework.SqlServer.dll
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\EntityFramework.xml
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.csprojResolveAssemblyReference.cache
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.dll
+D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.pdb

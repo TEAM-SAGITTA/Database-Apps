@@ -16,3 +16,6 @@ C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\bin\Release\TestingCS
 C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.exe
 C:\Users\Joro\Desktop\Team\Database-Apps\TestingCSharpCode\obj\Release\TestingCSharpCode.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\TestingCSharpCode\bin\Release\TestingCSharpCode.exe.config
+D:\SoftUni\TeamWork\Databases\GitClone\TestingCSharpCode\obj\Release\TestingCSharpCode.exe
+D:\SoftUni\TeamWork\Databases\GitClone\TestingCSharpCode\obj\Release\TestingCSharpCode.pdb
