@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -18,15 +19,15 @@ using System.Windows.Shapes;
 using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Driver;
-//using MSSql.Data;
 
 namespace Task5
 {
     public partial class MainWindow : Window
     {
-//        private SagittaDBEntities db = new SagittaDBEntities();
-        private DateTime starDate = DateTime.Now;
-        private DateTime endDate = DateTime.Now;
+        private static SagittaDBEntities db = new SagittaDBEntities();
+        private static readonly DateTime MinDate = db.SalesReports.Select(r => r.ReportDate).Min();
+        private DateTime reportStarDate = MinDate;
+        private DateTime reportEndDate = DateTime.Now;
 
         public MainWindow()
         {
@@ -41,8 +42,8 @@ namespace Task5
             var startCalendar = this.FindName("ReportStartDate") as Calendar;
 
             // TODO: Check for null
-            endCalendar.DisplayDateStart = new DateTime(2015, 02, 12);
-            startCalendar.DisplayDateStart = new DateTime(2015, 02, 12);
+            endCalendar.DisplayDateStart = MinDate;
+            startCalendar.DisplayDateStart = MinDate;
             endCalendar.DisplayDateEnd = DateTime.Now;
             startCalendar.DisplayDateEnd = DateTime.Now;
         }
@@ -51,11 +52,11 @@ namespace Task5
         {
             get
             {
-                return this.starDate;
+                return this.reportStarDate;
             }
             set
             {
-                this.starDate = value;
+                this.reportStarDate = value;
             }
         }
 
@@ -63,11 +64,11 @@ namespace Task5
         {
             get
             {
-                return this.endDate;
+                return this.reportEndDate;
             }
             set
             {
-                this.endDate = value;
+                this.reportEndDate = value;
             }
         }
 
@@ -104,18 +105,6 @@ namespace Task5
 
         private void MakeReportButton_OnClick(object sender, RoutedEventArgs e)
         {
-            // TODO: When db is redy
-            // Get all data from sql server. With foreach meake report for all products in given period
-
-            var report = new BsonDocument
-            {
-                {"product-id", 3},
-                {"product-name", "Beer “Zagorka”"},
-                {"vendor-name", "Zagorka Corp."},
-                {"total-quantity-sold", 673},
-                {"total-incomes", 700.24}
-            };
-
             if (!Directory.Exists(Constants.ReportsFolder))
             {
                 Directory.CreateDirectory(Constants.ReportsFolder);
@@ -130,18 +119,49 @@ namespace Task5
             if (!Directory.Exists(dateFolder))
             {
                 Directory.CreateDirectory(dateFolder);
-
             }
 
             Directory.CreateDirectory(destinationFolder);
-            string destination = string.Format("{0}\\{1}.json",
-                destinationFolder,
-                report["product-id"]);
-            File.WriteAllText(@destination, report.ToJson(
-                new JsonWriterSettings
+
+            foreach (var product in db.Products.Select(p=>new
+            {
+                p.ID,
+                p.Product_Name,
+                Vendor = p.Vendor.Vendor_Name
+            }))
+            {
+                
+                var inReports = db.SalesReports.Any(p => p.ProductId == product.ID);
+                if (inReports)
                 {
-                    OutputMode = JsonOutputMode.Strict
-                }));
+                    decimal totalIncomes = 0;
+                    foreach (var sale in db.SalesReports.Where(p=>p.ProductId == product.ID))
+                    {
+                        totalIncomes += sale.Quantity*sale.ActualPrice;
+                    }
+
+                    var report = new BsonDocument
+                    { 
+                        {"product-id", product.ID},
+                        {"product-name", product.Product_Name},
+                        {"vendor-name", product.Vendor},
+                        {"total-quantity-sold", db.SalesReports
+                            .Where(r=>r.ProductId == product.ID)
+                            .Sum(p=>p.Quantity)},
+                        {"total-incomes", Convert.ToDouble(totalIncomes)}
+                    };
+
+                    string destination = string.Format("{0}\\{1}.json", 
+                        destinationFolder, 
+                        report["product-id"]);
+                    File.WriteAllText(@destination, report.ToJson(
+                        new JsonWriterSettings
+                        {
+                            OutputMode = JsonOutputMode.Strict
+                        }));
+                }
+            }
+
             MessageBox.Show("Reports are done!");
         }
 
@@ -178,8 +198,8 @@ namespace Task5
                 var db = server.GetDatabase(Constants.DbName);
                 var collectionName = string.Format("{0}_{1}_{2}",
                     Constants.BaseColectionName,
-                    this.starDate.ToShortDateString().Replace('-', '_'),
-                    this.endDate.ToShortDateString().Replace('-', '_'));
+                    this.reportStarDate.ToShortDateString().Replace('-', '_'),
+                    this.reportEndDate.ToShortDateString().Replace('-', '_'));
                 var isCollectionExist = db.CollectionExists(collectionName);
                 if (!isCollectionExist)
                 {
@@ -210,7 +230,7 @@ namespace Task5
                 //                //                reports.Save(rep);
                 //            }
 
-               
+
                 Thread.Sleep(5000);
                 MessageBox.Show("Your data are on the server now!");
             }
@@ -223,7 +243,7 @@ namespace Task5
                 // This kill mongod.exe procces
                 process.Kill();
             }
-            
+
         }
     }
 }

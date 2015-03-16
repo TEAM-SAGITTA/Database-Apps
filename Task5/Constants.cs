@@ -1,4 +1,6 @@
-﻿namespace Task5
+﻿using System;
+
+namespace Task5
 {
     public class Constants
     {

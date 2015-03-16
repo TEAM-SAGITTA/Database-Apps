@@ -19,3 +19,5 @@ D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\EntityFramework.dll
 D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\EntityFramework.SqlServer.dll
 D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\EntityFramework.xml
 D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\EntityFramework.SqlServer.xml
+D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\MSSql.Data.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\MSSql.Data.pdb
