@@ -9,15 +9,16 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Task5</RootNamespace>
     <AssemblyName>Task5</AssemblyName>
-<<<<<<< HEAD
+    <!-- <<<<<<< HEAD
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
 =======
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
->>>>>>> 448fb82ced13b14c8b581a5e2496e3edb9aa69aa
+>>>>>>> 448fb82ced13b14c8b581a5e2496e3edb9aa69aa -->
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
