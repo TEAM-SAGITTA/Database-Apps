@@ -1,6 +1,4 @@
-﻿using _02.ZipReports_To_MSSQL.Properties;
-
-namespace _02.ZipReports_To_MSSQL
+﻿namespace _02.ZipReports_To_MSSQL
 {
     using System;
     using System.Collections.Generic;
@@ -11,6 +9,7 @@ namespace _02.ZipReports_To_MSSQL
     using ICSharpCode.SharpZipLib.Core;
     using ICSharpCode.SharpZipLib.Zip;
     using MSSql.Data;
+    using _02.ZipReports_To_MSSQL.Properties;
 
     public class DataMigrator
     {

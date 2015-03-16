@@ -64,6 +64,6 @@ C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.Properties.Reso
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.csproj.GenerateResource.Cache
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.exe
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MSSql.Data.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MSSql.Data.pdb
-C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.csprojResolveAssemblyReference.cache

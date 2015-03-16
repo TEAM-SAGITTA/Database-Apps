@@ -67,9 +67,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MSSql.Data\MSSql.Data.csproj">
       <Project>{db961331-3a87-4714-9928-4c78365c6a31}</Project>
       <Name>MSSql.Data</Name>
