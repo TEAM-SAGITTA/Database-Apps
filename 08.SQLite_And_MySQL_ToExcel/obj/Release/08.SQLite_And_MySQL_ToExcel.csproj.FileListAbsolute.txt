@@ -33,3 +33,16 @@ C:\Users\Joro\Desktop\Team\Database-Apps\08.SQLite_And_MySQL_ToExcel\bin\Release
 C:\Users\Joro\Desktop\Team\Database-Apps\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.pdb
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\08.SQLite_And_MySQL_ToExcel.dll.config
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\08.SQLite_And_MySQL_ToExcel.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\08.SQLite_And_MySQL_ToExcel.pdb
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\EntityFramework.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\EntityFramework.SqlServer.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\System.Data.SQLite.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\System.Data.SQLite.EF6.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\EntityFramework.xml
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\EntityFramework.SqlServer.xml
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\bin\Release\System.Data.SQLite.xml
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.csprojResolveAssemblyReference.cache
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.dll
+G:\SotUni\DBProject\08.SQLite_And_MySQL_ToExcel\obj\Release\08.SQLite_And_MySQL_ToExcel.pdb

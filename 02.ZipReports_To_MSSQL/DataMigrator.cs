@@ -15,7 +15,7 @@
     {
         private const string TempFolderForExtract = @"../../Temp";
         private const string ReportsFilePath = "../../../InputFiles/Sample-Sales-Reports.zip";
-
+         
         public void MigrateDataFromExcelFiles()
         {
             ExtractZipFile(ReportsFilePath);

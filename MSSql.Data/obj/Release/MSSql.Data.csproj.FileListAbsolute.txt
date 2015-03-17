@@ -38,3 +38,12 @@ D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\bin\Release\EntityFramework.Sq
 D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.csprojResolveAssemblyReference.cache
 D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.dll
 D:\SoftUni\TeamWork\Databases\GitClone\MSSql.Data\obj\Release\MSSql.Data.pdb
+G:\SotUni\DBProject\MSSql.Data\bin\Release\MSSql.Data.dll.config
+G:\SotUni\DBProject\MSSql.Data\bin\Release\MSSql.Data.dll
+G:\SotUni\DBProject\MSSql.Data\bin\Release\MSSql.Data.pdb
+G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.dll
+G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.SqlServer.dll
+G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.xml
+G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.SqlServer.xml
+G:\SotUni\DBProject\MSSql.Data\obj\Release\MSSql.Data.dll
+G:\SotUni\DBProject\MSSql.Data\obj\Release\MSSql.Data.pdb
