@@ -23,7 +23,7 @@
     using System.Reflection;
     using _02.ZipReports_To_MSSQL;
     using _06.Xml_To_Sql_Server_Loader;
- 
+
 
     public partial class MainWindow : Window
     {
@@ -59,29 +59,34 @@
                 connection.Open();
                 string firstTableName = "CompanyNames";
                 string secondTableName = "ExpencesByMonth";
-                
-                using (SqlTransaction transaction = connection.BeginTransaction())
+                string filePath = FilePathPicker();
+
+                if (filePath != string.Empty)
                 {
-                    try
-                    {                       
-                        XmlSqlServerLoader.DropCreateSqlServerTables(
-                            connection, firstTableName, secondTableName, transaction);
-
-                        XmlSqlServerLoader.PolulateSqlTables(
-                            connection, firstTableName, secondTableName, transaction);
-
-                        transaction.Commit();
-                        MessageBox.Show("Data loaded from XML file!");
-                    }
-                    catch (Exception exeption)
+                    using (SqlTransaction transaction = connection.BeginTransaction())
                     {
-                        transaction.Rollback();
-                        MessageBox.Show("Data loading falied!\n" + exeption.Message);
-                    }
-                }
+                        try
+                        {
+                            XmlSqlServerLoader.DropCreateSqlServerTables(
+                                connection, firstTableName, secondTableName, transaction);
 
-                connection.Close();
+                            XmlSqlServerLoader.PolulateSqlTables(
+                                connection, firstTableName, secondTableName, filePath, transaction);
+
+                            transaction.Commit();
+                            MessageBox.Show("Data loaded from XML file!");
+                        }
+                        catch (Exception exeption)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Data loading falied!\n" + exeption.Message);
+                        }
+                    }
+
+                    connection.Close();
+                }
             }
+
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -139,6 +144,21 @@
         {
             var window = new Task5Window();
             window.Show();
+        }
+
+        private static string FilePathPicker()
+        {
+            Microsoft.Win32.OpenFileDialog filePicker = new Microsoft.Win32.OpenFileDialog();
+            filePicker.DefaultExt = ".xml";
+            filePicker.Filter = "XML files (*.xml)|*.xml";
+            // TODO think better way
+            filePicker.InitialDirectory = Directory.GetParent((
+                Directory.GetParent(
+                Directory.GetCurrentDirectory())).ToString()).ToString();
+            bool? isFilePiced = filePicker.ShowDialog();
+            string filePath = filePicker.FileName;
+
+            return filePath;
         }
     }
 }

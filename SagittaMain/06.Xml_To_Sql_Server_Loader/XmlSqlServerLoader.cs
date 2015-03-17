@@ -7,7 +7,6 @@
 
     public class XmlSqlServerLoader
     {
-
         public static void DropCreateSqlServerTables(
              SqlConnection connection,
              string firstTableName,
@@ -24,8 +23,8 @@
 
             string createSecondTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
-                "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenseMonth NVARCHAR(50) NOT NULL," +
-                "CompanyNameId int, Expenses NVARCHAR(20) NOT NULL," + //TODO make it money if you can
+                "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenseMonth NVARCHAR(50) NULL," +
+                "CompanyNameId int, Expenses NVARCHAR(20) NULL," + //TODO make it money if you can
                 "CONSTRAINT FK_CompanyNameId FOREIGN KEY (CompanyNameId) REFERENCES {1}(CompanyNameId) ON DELETE SET NULL)",
                 secondTableName, firstTableName);
 
@@ -43,13 +42,9 @@
              SqlConnection connection,
              string firstTableName,
              string secondTableName,
+             string filePath,
              SqlTransaction transaction)
         {
-            string fileDirectoryName = @"\Files\expensesByVendorMonth.xml";
-            string currentDir = Directory.GetCurrentDirectory();
-            string binDir = Directory.GetParent(currentDir).FullName;
-            string filePath = Directory.GetParent(binDir).FullName + fileDirectoryName;
-
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
@@ -72,10 +67,10 @@
                 {
                     var expense = childNodes[i];
                     var expenceMonth = expense.Attributes[childAtribute].Value;
-                    var expenceValue = float.Parse(expense.InnerText);
+                    var expenceValue = float.Parse(childNodes[i].InnerText);
 
-                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES({1},{2},'{3}')",
-                        secondTableName, expenceValue, (nodeId), expenceMonth);
+                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES({1}, {2},'{3}')",
+                        secondTableName, expenceValue, nodeId, expenceMonth);
 
                     SqlCommand inserChilds = new SqlCommand(insertChildsStr, connection, transaction);
                     inserChilds.ExecuteNonQuery();
