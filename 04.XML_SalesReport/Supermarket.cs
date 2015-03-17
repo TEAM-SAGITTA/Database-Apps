@@ -12,16 +12,18 @@ namespace _04.XML_SalesReport
     using System;
     using System.Collections.Generic;
     
-    public partial class SalesReport
+    public partial class Supermarket
     {
-        public int Id { get; set; }
-        public int ProductId { get; set; }
-        public int SupermarketId { get; set; }
-        public int Quantity { get; set; }
-        public decimal ActualPrice { get; set; }
-        public System.DateTime ReportDate { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Supermarket()
+        {
+            this.SalesReports = new HashSet<SalesReport>();
+        }
     
-        public virtual Product Product { get; set; }
-        public virtual Supermarket Supermarket { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SalesReport> SalesReports { get; set; }
     }
 }
