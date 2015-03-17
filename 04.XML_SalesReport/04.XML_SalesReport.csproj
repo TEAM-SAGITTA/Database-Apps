@@ -79,9 +79,15 @@
     <Compile Include="Vendor.cs">
       <DependentUpon>SagittaDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Output\XMLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Output\SalesReportByVendors.xml" />
+    <Content Include="Output\SalesReportByVendors.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Output\SalesReport.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
