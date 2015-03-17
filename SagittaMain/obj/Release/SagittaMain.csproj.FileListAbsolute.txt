@@ -70,7 +70,6 @@ C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\mysql.data.enti
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.EF6.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.Linq.dll
-C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\Task5.exe
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\MSSql.Data.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\ICSharpCode.SharpZipLib.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\02.ZipReports_To_MSSQL.pdb
@@ -167,3 +166,8 @@ G:\SotUni\DBProject\SagittaMain\obj\Release\SagittaMain.Resources.DbsPics.Resour
 G:\SotUni\DBProject\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
 G:\SotUni\DBProject\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.dll
+C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\Task5.dll
+C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\Task5Window.baml
+C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\Task5Window.g.cs

@@ -15,7 +15,7 @@
     {
         private const string TempFolderForExtract = @"../../Temp";
         private const string ReportsFilePath = "../../../InputFiles/Sample-Sales-Reports.zip";
-         
+
         public void MigrateDataFromExcelFiles()
         {
             ExtractZipFile(ReportsFilePath);
@@ -123,7 +123,7 @@
                     supermarketContext.SaveChanges();
                 }
 
-                for (int i = 2; i < excelRows.Count - 2; i++)
+                for (int i = 2; i < excelRows.Count - 1; i++)
                 {
 
                     string productName = excelRows[i][0].ToString();
