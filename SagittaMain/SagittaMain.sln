@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaMain", "SagittaMain.csproj", "{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingCSharpCode", "..\TestingCSharpCode\TestingCSharpCode.csproj", "{BFDAD95A-3104-41B1-93AE-568FB2585A8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.SQLite_And_MySQL_ToExcel", "..\08.SQLite_And_MySQL_ToExcel\08.SQLite_And_MySQL_ToExcel.csproj", "{1732EFCE-A351-46E1-B68B-7D4101EB7968}"
 EndProject
@@ -24,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ZipReports_To_MSSQL", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csproj", "{673A32D9-90A8-4FEE-987D-18466DC7F3A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,10 +34,6 @@ Global
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFDAD95A-3104-41B1-93AE-568FB2585A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1732EFCE-A351-46E1-B68B-7D4101EB7968}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,6 +58,10 @@ Global
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
