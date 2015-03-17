@@ -55,24 +55,24 @@
             string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
             string filePath = FilePathPicker();
 
-            MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to load data from: {0} ?", filePath),
-                "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            
-            if (confirmation == MessageBoxResult.Yes)
+            if (filePath != string.Empty)
             {
-                try
+                MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to load the data from: {0} ?", filePath),
+                    "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                
+                if (confirmation == MessageBoxResult.Yes)
                 {
-                    XmlSqlServerLoader.XmlDataPusher(DbConnectionString, filePath);
-                    if (filePath != "")
+                    try
                     {
+                        XmlSqlServerLoader.XmlDataPusher(DbConnectionString, filePath);
                         MessageBox.Show("Data loaded successful!");
                     }
-                }
-                catch (Exception exeption)
-                {
-                    MessageBox.Show("Data loading falied!\n" + exeption.Message);
-                }
-            }    
+                    catch (Exception exeption)
+                    {
+                        MessageBox.Show("Data loading falied!\n" + exeption.Message);
+                    }
+                }   
+            } 
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
