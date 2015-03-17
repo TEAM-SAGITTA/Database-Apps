@@ -24,7 +24,7 @@
             string createSecondTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
                 "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenseMonth NVARCHAR(50) NULL," +
-                "CompanyNameId int, Expenses NVARCHAR(20) NULL," + //TODO make it money if you can
+                "CompanyNameId int, Expenses MONEY NULL," + 
                 "CONSTRAINT FK_CompanyNameId FOREIGN KEY (CompanyNameId) REFERENCES {1}(CompanyNameId) ON DELETE SET NULL)",
                 secondTableName, firstTableName);
 
@@ -67,12 +67,13 @@
                 {
                     var expense = childNodes[i];
                     var expenceMonth = expense.Attributes[childAtribute].Value;
-                    var expenceValue = float.Parse(childNodes[i].InnerText);
+                    var expenceValue = decimal.Parse(childNodes[i].InnerText);
 
-                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES({1}, {2},'{3}')",
-                        secondTableName, expenceValue, nodeId, expenceMonth);
+                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES('{1}', {2}, @Money)",
+                        secondTableName, expenceMonth, nodeId);
 
-                    SqlCommand inserChilds = new SqlCommand(insertChildsStr, connection, transaction);
+                    SqlCommand inserChilds = new SqlCommand(insertChildsStr, connection, transaction);                    
+                    inserChilds.Parameters.AddWithValue("@Money", expenceValue);
                     inserChilds.ExecuteNonQuery();
                 }
 

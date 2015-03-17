@@ -47,3 +47,4 @@ G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.xml
 G:\SotUni\DBProject\MSSql.Data\bin\Release\EntityFramework.SqlServer.xml
 G:\SotUni\DBProject\MSSql.Data\obj\Release\MSSql.Data.dll
 G:\SotUni\DBProject\MSSql.Data\obj\Release\MSSql.Data.pdb
+G:\SotUni\DBProject\MSSql.Data\obj\Release\MSSql.Data.csprojResolveAssemblyReference.cache

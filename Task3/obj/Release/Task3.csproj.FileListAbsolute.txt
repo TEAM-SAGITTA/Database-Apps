@@ -73,3 +73,4 @@ G:\SotUni\DBProject\Task3\obj\Release\Task3.Properties.Resources.resources
 G:\SotUni\DBProject\Task3\obj\Release\Task3.csproj.GenerateResource.Cache
 G:\SotUni\DBProject\Task3\obj\Release\Task3.exe
 G:\SotUni\DBProject\Task3\obj\Release\Task3.pdb
+G:\SotUni\DBProject\Task3\obj\Release\Task3.csprojResolveAssemblyReference.cache
