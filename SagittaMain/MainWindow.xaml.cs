@@ -53,40 +53,26 @@
         {
             //TODO change the connection string, Test DB is on my pc
             string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
+            string filePath = FilePathPicker();
 
-            using (SqlConnection connection = new SqlConnection(DbConnectionString))
+            MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to load data from: {0} ?", filePath),
+                "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            
+            if (confirmation == MessageBoxResult.Yes)
             {
-                connection.Open();
-                string firstTableName = "CompanyNames";
-                string secondTableName = "ExpencesByMonth";
-                string filePath = FilePathPicker();
-
-                if (filePath != string.Empty)
+                try
                 {
-                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    XmlSqlServerLoader.XmlDataPusher(DbConnectionString, filePath);
+                    if (filePath != "")
                     {
-                        try
-                        {
-                            XmlSqlServerLoader.DropCreateSqlServerTables(
-                                connection, firstTableName, secondTableName, transaction);
-
-                            XmlSqlServerLoader.PolulateSqlTables(
-                                connection, firstTableName, secondTableName, filePath, transaction);
-
-                            transaction.Commit();
-                            MessageBox.Show("Data loaded from XML file!");
-                        }
-                        catch (Exception exeption)
-                        {
-                            transaction.Rollback();
-                            MessageBox.Show("Data loading falied!\n" + exeption.Message);
-                        }
+                        MessageBox.Show("Data loaded successful!");
                     }
-
-                    connection.Close();
                 }
-            }
-
+                catch (Exception exeption)
+                {
+                    MessageBox.Show("Data loading falied!\n" + exeption.Message);
+                }
+            }    
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

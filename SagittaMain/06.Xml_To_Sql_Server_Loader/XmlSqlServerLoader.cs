@@ -7,14 +7,46 @@
 
     public class XmlSqlServerLoader
     {
+        private const string firstTableName = "CompanyNames";
+        private const string secondTableName = "ExpensesByMonth";
+        public static void XmlDataPusher(string DbConnectionString, string filePath)
+        {            
+            using (SqlConnection connection = new SqlConnection(DbConnectionString))
+            {                
+                connection.Open();                
+                if (filePath != string.Empty)
+                {
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            XmlSqlServerLoader.DropCreateSqlServerTables(
+                                connection, transaction);
+
+                            XmlSqlServerLoader.PolulateSqlTables(
+                                connection, filePath, transaction);
+
+                            transaction.Commit();
+                        }
+                        catch (Exception exeption)
+                        {
+                            transaction.Rollback();
+                            throw exeption;
+                        }
+                    }
+
+                    connection.Close();                  
+                }
+            }
+        }
+
+
         public static void DropCreateSqlServerTables(
              SqlConnection connection,
-             string firstTableName,
-             string secondTableName,
              SqlTransaction transaction)
         {
-            string dropConstraintStr = string.Format("IF OBJECT_ID('{0}') IS NOT NULL ALTER TABLE {0} DROP CONSTRAINT FK_CompanyNameId;"
-                , secondTableName);
+            string dropConstraintStr = string.Format("IF OBJECT_ID('{0}') IS NOT NULL ALTER TABLE {0} " +
+                "DROP CONSTRAINT FK_CompanyNameId;", secondTableName);
 
             string createFirstTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
@@ -40,8 +72,6 @@
 
         public static void PolulateSqlTables(
              SqlConnection connection,
-             string firstTableName,
-             string secondTableName,
              string filePath,
              SqlTransaction transaction)
         {
@@ -58,7 +88,7 @@
             foreach (XmlNode vendor in rootNodes)
             {
                 var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
-                var insertStringCmd = string.Format("INSERT INTO {0} VALUES('{1}')", firstTableName, RootAtributeValue);
+                var insertStringCmd = string.Format("INSERT INTO {0} VALUES('{1}')", firstTableName, RootAtributeValue); // pravq prostotiq da grymne za test
                 SqlCommand insertVendor = new SqlCommand(insertStringCmd, connection, transaction);
                 insertVendor.ExecuteNonQuery();
                 XmlNodeList childNodes = vendor.SelectNodes(childName);
