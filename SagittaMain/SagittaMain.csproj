@@ -222,7 +222,7 @@
       <Project>{673A32D9-90A8-4FEE-987D-18466DC7F3A5}</Project>
       <Name>Task5</Name>
     </ProjectReference>
-    <ProjectReference Include="06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj">
+    <ProjectReference Include="..\06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj">
       <Project>{513d6abc-9f65-4c57-aa80-3423519253f8}</Project>
       <Name>06.Xml_To_Sql_Server_Loader</Name>
     </ProjectReference>

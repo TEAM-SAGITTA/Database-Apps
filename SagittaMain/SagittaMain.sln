@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ZipReports_To_MSSQL", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csproj", "{673A32D9-90A8-4FEE-987D-18466DC7F3A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "..\06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
