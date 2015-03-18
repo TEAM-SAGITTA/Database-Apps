@@ -32,3 +32,4 @@ G:\SotUni\DBProject\04.XML_SalesReport\bin\Release\EntityFramework.xml
 G:\SotUni\DBProject\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
 G:\SotUni\DBProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 G:\SotUni\DBProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+G:\SotUni\DBProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache

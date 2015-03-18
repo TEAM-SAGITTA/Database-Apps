@@ -202,11 +202,6 @@
     <Resource Include="Resources\DbsPics\XMLVendorReport.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Files\expensesByVendorMonth.xml">
-      <SubType>Designer</SubType>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Background_back_up.png" />
   </ItemGroup>
   <ItemGroup>

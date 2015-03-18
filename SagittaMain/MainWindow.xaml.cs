@@ -53,7 +53,7 @@
         {
             //TODO change the connection string, Test DB is on my pc
             string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
-            string filePath = FilePathPicker();
+            string filePath = FilePathPicker(".xml");
 
             if (filePath != string.Empty)
             {
@@ -132,15 +132,20 @@
             window.Show();
         }
 
-        private static string FilePathPicker()
+        private static string FilePathPicker(string fileExtension)
         {
             Microsoft.Win32.OpenFileDialog filePicker = new Microsoft.Win32.OpenFileDialog();
-            filePicker.DefaultExt = ".xml";
-            filePicker.Filter = "XML files (*.xml)|*.xml";
-            // TODO think better way
-            filePicker.InitialDirectory = Directory.GetParent((
+            if (fileExtension.ToLower() != "all" )
+            {
+                filePicker.DefaultExt = fileExtension.ToString();
+                filePicker.Filter = string.Format("XML files (*{0})|*{0}", fileExtension);
+            }
+
+            // TODO think better way 
+            filePicker.InitialDirectory = Directory.GetParent(
+                Directory.GetParent((
                 Directory.GetParent(
-                Directory.GetCurrentDirectory())).ToString()).ToString();
+                Directory.GetCurrentDirectory())).ToString()).ToString()).ToString() + "\\InputFiles";
             bool? isFilePiced = filePicker.ShowDialog();
             string filePath = filePicker.FileName;
 
