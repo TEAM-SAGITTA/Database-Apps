@@ -23,6 +23,8 @@
     using System.Reflection;
     using _02.ZipReports_To_MSSQL;
     using _06.Xml_To_Sql_Server_Loader;
+    using _04.XML_SalesReport;
+
 
 
     public partial class MainWindow : Window
@@ -77,7 +79,10 @@
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("MS SQL to XML Magic !!!");
+            //MessageBox.Show("MS SQL to XML Magic !!!");
+            XMLHelper xmlFile = new XMLHelper();
+            xmlFile.exportToXML();
+            MessageBox.Show("MS SQL Export to XML file has been finished!");
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
