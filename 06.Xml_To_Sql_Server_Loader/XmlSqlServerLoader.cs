@@ -28,10 +28,10 @@
 
                             transaction.Commit();
                         }
-                        catch (Exception exeption)
+                        catch (Exception exception)
                         {
                             transaction.Rollback();
-                            throw exeption;
+                            throw exception;
                         }
                     }
 
@@ -55,7 +55,7 @@
 
             string createSecondTableStr = string.Format(
                 "IF OBJECT_ID('{0}') IS NOT NULL DROP TABLE {0} CREATE TABLE {0}" +
-                "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenseMonth NVARCHAR(50) NULL," +
+                "(Id  int IDENTITY(1,1) PRIMARY KEY, ExpenseMonth DATE NULL," +
                 "CompanyNameId int, Expenses MONEY NULL," + 
                 "CONSTRAINT FK_CompanyNameId FOREIGN KEY (CompanyNameId) REFERENCES {1}(CompanyNameId) ON DELETE SET NULL)",
                 secondTableName, firstTableName);
@@ -70,10 +70,7 @@
             createSecondTable.ExecuteNonQuery();
         }
 
-        public static void PolulateSqlTables(
-             SqlConnection connection,
-             string filePath,
-             SqlTransaction transaction)
+        public static void PolulateSqlTables(SqlConnection connection, string filePath, SqlTransaction transaction)
         {
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
@@ -88,7 +85,7 @@
             foreach (XmlNode vendor in rootNodes)
             {
                 var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
-                var insertStringCmd = string.Format("INSERT INTO {0} VALUES('{1}')", firstTableName, RootAtributeValue); // pravq prostotiq da grymne za test
+                var insertStringCmd = string.Format("INSERT INTO {0} VALUES('{1}')", firstTableName, RootAtributeValue);
                 SqlCommand insertVendor = new SqlCommand(insertStringCmd, connection, transaction);
                 insertVendor.ExecuteNonQuery();
                 XmlNodeList childNodes = vendor.SelectNodes(childName);
@@ -97,13 +94,15 @@
                 {
                     var expense = childNodes[i];
                     var expenceMonth = expense.Attributes[childAtribute].Value;
+                    var expenceDate = DateTime.Parse(expenceMonth);
                     var expenceValue = decimal.Parse(childNodes[i].InnerText);
 
-                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES('{1}', {2}, @Money)",
-                        secondTableName, expenceMonth, nodeId);
+                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES(@Date, {1}, @Money)",
+                        secondTableName, nodeId);
 
                     SqlCommand inserChilds = new SqlCommand(insertChildsStr, connection, transaction);                    
                     inserChilds.Parameters.AddWithValue("@Money", expenceValue);
+                    inserChilds.Parameters.AddWithValue("@Date", expenceDate);
                     inserChilds.ExecuteNonQuery();
                 }
 

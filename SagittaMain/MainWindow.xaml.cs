@@ -51,8 +51,8 @@
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
-            //TODO change the connection string, Test DB is on my pc
-            string DbConnectionString = "Server=.; Integrated security=SSPI; database=Test";
+            //If we change DB name should change DbConnectionString too!
+            string DbConnectionString = "Server=.; Integrated security=SSPI; database=SagittaDB";
             string filePath = FilePathPicker(".xml");
 
             if (filePath != string.Empty)
@@ -67,9 +67,9 @@
                         XmlSqlServerLoader.XmlDataPusher(DbConnectionString, filePath);
                         MessageBox.Show("Data loaded successful!");
                     }
-                    catch (Exception exeption)
+                    catch (Exception exception)
                     {
-                        MessageBox.Show("Data loading falied!\n" + exeption.Message);
+                        MessageBox.Show("Data loading falied!\n" + exception.Message);
                     }
                 }   
             } 
@@ -135,7 +135,7 @@
         private static string FilePathPicker(string fileExtension)
         {
             Microsoft.Win32.OpenFileDialog filePicker = new Microsoft.Win32.OpenFileDialog();
-            if (fileExtension.ToLower() != "all" )
+            if (fileExtension != "all" )
             {
                 filePicker.DefaultExt = fileExtension.ToString();
                 filePicker.Filter = string.Format("XML files (*{0})|*{0}", fileExtension);
@@ -150,6 +150,11 @@
             string filePath = filePicker.FileName;
 
             return filePath;
+        }
+
+        private static string FilePathPicker()
+        {
+            return FilePathPicker("all");
         }
     }
 }
