@@ -54,7 +54,7 @@
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
             //If we change DB name should change DbConnectionString too!
-            string DbConnectionString = "Server=.; Integrated security=SSPI; database=SagittaDB";
+            string DbConnectionString = "Server=.; Integrated security=SSPI; database=SagittaDB"; // todo make it beutifle
             string filePath = FilePathPicker(".xml");
 
             if (filePath != string.Empty)
