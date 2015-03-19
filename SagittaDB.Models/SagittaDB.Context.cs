@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSSql.Data
+namespace SagittaDB.Models
 {
     using System;
     using System.Data.Entity;
@@ -25,10 +25,12 @@ namespace MSSql.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ExpensesByMonth> ExpensesByMonths { get; set; }
         public virtual DbSet<Measure> Measures { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<SalesReport> SalesReports { get; set; }
         public virtual DbSet<Supermarket> Supermarkets { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Vendor> Vendors { get; set; }
     }
 }

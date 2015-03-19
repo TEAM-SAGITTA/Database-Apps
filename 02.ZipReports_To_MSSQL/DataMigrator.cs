@@ -8,8 +8,9 @@
     using System.Linq;
     using ICSharpCode.SharpZipLib.Core;
     using ICSharpCode.SharpZipLib.Zip;
-    using MSSql.Data;
+   
     using _02.ZipReports_To_MSSQL.Properties;
+    using SagittaDB.Models;
 
     public class DataMigrator
     {

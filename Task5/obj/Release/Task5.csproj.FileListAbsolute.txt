@@ -37,8 +37,8 @@ C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\EntityFramework.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MongoDB.Bson.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MongoDB.Driver.dll
-C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MSSql.Data.dll
-C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MSSql.Data.pdb
+C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\SagittaDB.Models.dll
+C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\SagittaDB.Models.pdb
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\EntityFramework.xml
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\MongoDB.Bson.xml

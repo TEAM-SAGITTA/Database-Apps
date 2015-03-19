@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaMain", "SagittaMain.csproj", "{9D3A8C5B-6F14-4F62-AD9A-B098D55B539C}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.XML_SalesReport", "..\04.XML_SalesReport\04.XML_SalesReport.csproj", "{4998181B-67F5-4F3B-87D6-455A021571E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "..\Task3\Task3.csproj", "{19BE847E-1BA0-410D-9D6F-9E4FB663E45B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSql.Data", "..\MSSql.Data\MSSql.Data.csproj", "{DB961331-3A87-4714-9928-4C78365C6A31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{F4CED4ED-08A5-4041-BE20-4938E5F34C87}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,6 +21,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csproj", "{673A32D9-90A8-4FEE-987D-18466DC7F3A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "..\06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaDB.Models", "..\SagittaDB.Models\SagittaDB.Models.csproj", "{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,10 +46,6 @@ Global
 		{19BE847E-1BA0-410D-9D6F-9E4FB663E45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19BE847E-1BA0-410D-9D6F-9E4FB663E45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19BE847E-1BA0-410D-9D6F-9E4FB663E45B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB961331-3A87-4714-9928-4C78365C6A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB961331-3A87-4714-9928-4C78365C6A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB961331-3A87-4714-9928-4C78365C6A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB961331-3A87-4714-9928-4C78365C6A31}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6269BD12-EB21-4681-846B-FE9143FB4941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6269BD12-EB21-4681-846B-FE9143FB4941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6269BD12-EB21-4681-846B-FE9143FB4941}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,6 +58,10 @@ Global
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

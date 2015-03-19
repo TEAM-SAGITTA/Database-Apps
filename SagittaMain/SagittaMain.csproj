@@ -129,9 +129,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -212,10 +209,6 @@
     <ProjectReference Include="..\04.XML_SalesReport\04.XML_SalesReport.csproj">
       <Project>{4998181b-67f5-4f3b-87d6-455a021571e4}</Project>
       <Name>04.XML_SalesReport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MSSql.Data\MSSql.Data.csproj">
-      <Project>{DB961331-3A87-4714-9928-4C78365C6A31}</Project>
-      <Name>MSSql.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
       <Project>{673A32D9-90A8-4FEE-987D-18466DC7F3A5}</Project>

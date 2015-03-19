@@ -58,14 +58,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MSSql.Data\MSSql.Data.csproj">
-      <Project>{db961331-3a87-4714-9928-4c78365c6a31}</Project>
-      <Name>MSSql.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SagittaDB.Models\SagittaDB.Models.csproj">
+      <Project>{5c71f502-b7ff-4787-b0ab-d2b410d92df1}</Project>
+      <Name>SagittaDB.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,21 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSSql.Data
+namespace SagittaDB.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Vendor
+    public partial class ExpensesByMonth
     {
-        public Vendor()
-        {
-            this.Products = new HashSet<Product>();
-        }
-    
-        public int ID { get; set; }
-        public string Vendor_Name { get; set; }
-    
-        public virtual ICollection<Product> Products { get; set; }
+        public int Id { get; set; }
+        public Nullable<System.DateTime> ExpenseMonth { get; set; }
+        public Nullable<int> VendorId { get; set; }
+        public Nullable<decimal> Expenses { get; set; }
     }
 }

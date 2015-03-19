@@ -7,13 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSSql.Data
+namespace SagittaDB.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Supermarket
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Supermarket()
         {
             this.SalesReports = new HashSet<SalesReport>();
@@ -22,6 +23,7 @@ namespace MSSql.Data
         public int Id { get; set; }
         public string Name { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SalesReport> SalesReports { get; set; }
     }
 }

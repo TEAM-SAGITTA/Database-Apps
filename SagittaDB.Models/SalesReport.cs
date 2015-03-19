@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSSql.Data
+namespace SagittaDB.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Measure
+    public partial class SalesReport
     {
-        public Measure()
-        {
-            this.Products = new HashSet<Product>();
-        }
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public int SupermarketId { get; set; }
+        public int Quantity { get; set; }
+        public decimal ActualPrice { get; set; }
+        public System.DateTime ReportDate { get; set; }
     
-        public int ID { get; set; }
-        public string Measure_Name { get; set; }
-    
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Supermarket Supermarket { get; set; }
     }
 }
