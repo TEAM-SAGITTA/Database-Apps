@@ -209,6 +209,10 @@
       <Project>{6269bd12-eb21-4681-846b-fe9143fb4941}</Project>
       <Name>02.ZipReports_To_MSSQL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\04.XML_SalesReport\04.XML_SalesReport.csproj">
+      <Project>{4998181b-67f5-4f3b-87d6-455a021571e4}</Project>
+      <Name>04.XML_SalesReport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSSql.Data\MSSql.Data.csproj">
       <Project>{DB961331-3A87-4714-9928-4C78365C6A31}</Project>
       <Name>MSSql.Data</Name>
