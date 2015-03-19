@@ -138,8 +138,6 @@ G:\SotUni\DBProject\SagittaMain\bin\Release\EntityFramework.SqlServer.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\MongoDB.Bson.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\MongoDB.Driver.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\MSSql.Data.dll
-G:\SotUni\DBProject\SagittaMain\bin\Release\MySql.Data.dll
-G:\SotUni\DBProject\SagittaMain\bin\Release\mysql.data.entity.EF6.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\System.Data.SQLite.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\System.Data.SQLite.EF6.dll
 G:\SotUni\DBProject\SagittaMain\bin\Release\System.Data.SQLite.Linq.dll
@@ -171,3 +169,5 @@ C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\Task5.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.pdb
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\Task5Window.baml
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\Task5Window.g.cs
+G:\SotUni\DBProject\SagittaMain\bin\Release\04.XML_SalesReport.dll
+G:\SotUni\DBProject\SagittaMain\bin\Release\04.XML_SalesReport.pdb

@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <expenses-by-month>
-  <vendor name="Nestle Sofia Corp.">
-    <expenses month="Jul-2013">30.00</expenses>
-    <expenses month="Aug-2013">40.00</expenses>
+  <vendor name="Zagorka">
+    <expenses month="Jul-2013">2130.01</expenses>
+    <expenses month="Aug-2013">3140.10</expenses>
   </vendor>
-  <vendor name="Targovishte Bottling Company Ltd.">
-    <expenses month="Jul-2013">200.00</expenses>
-    <expenses month="Aug-2013">180.00</expenses>
+  <vendor name="Nestle">
+    <expenses month="Jul-2013">1200.00</expenses>
+    <expenses month="Aug-2013">2180.00</expenses>
   </vendor>
-  <vendor name="Zagorka Corp.">
-    <expenses month="Jul-2013">120.00</expenses>
-    <expenses month="Aug-2013">180.00</expenses>
+  <vendor name="Lindt">
+    <expenses month="Jul-2013">1120.55</expenses>
+    <expenses month="Aug-2013">1180.00</expenses>
+  </vendor>
+  <vendor name="Bulgartabak">
+    <expenses month="Jul-2013">2120.10</expenses>
+    <expenses month="Aug-2013">2100.11</expenses>
+  </vendor>
+  <vendor name="Chipi">
+    <expenses month="Jul-2013">520.00</expenses>
+    <expenses month="Aug-2013">300.04</expenses>
+  </vendor>
+  <vendor name="Coca Cola">
+    <expenses month="Jul-2013">1520.70</expenses>
+    <expenses month="Aug-2013">2300.20</expenses>
+  </vendor>
+  <vendor name="Bankia">
+    <expenses month="Jul-2013">1620.03</expenses>
+    <expenses month="Aug-2013">1980.02</expenses>
+  </vendor>
+  <vendor name="NesCafe">
+    <expenses month="Jul-2013">1233.90</expenses>
+    <expenses month="Aug-2013">2311.60</expenses>
+  </vendor>
+  <vendor name="Vinprom Karnobat">
+    <expenses month="Jul-2013">2234.22</expenses>
+    <expenses month="Aug-2013">2314.12</expenses>
+  </vendor>
+  <vendor name="Detelina">
+    <expenses month="Jul-2013">34.26</expenses>
+    <expenses month="Aug-2013">311.82</expenses>
   </vendor>
 </expenses-by-month>
