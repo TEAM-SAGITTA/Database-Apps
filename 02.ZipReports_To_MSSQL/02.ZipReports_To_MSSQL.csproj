@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SagittaDB.Models\SagittaDB.Models.csproj">
-      <Project>{5c71f502-b7ff-4787-b0ab-d2b410d92df1}</Project>
+      <Project>{81376967-06c1-46b4-92a4-76f5e4c60615}</Project>
       <Name>SagittaDB.Models</Name>
     </ProjectReference>
   </ItemGroup>

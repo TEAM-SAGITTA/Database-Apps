@@ -8,8 +8,6 @@ C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\EntityFramework
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\MongoDB.Bson.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\MongoDB.Driver.dll
-C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\MySql.Data.dll
-C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\mysql.data.entity.EF6.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.EF6.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.Linq.dll

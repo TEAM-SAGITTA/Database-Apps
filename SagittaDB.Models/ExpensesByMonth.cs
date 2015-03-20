@@ -18,5 +18,7 @@ namespace SagittaDB.Models
         public Nullable<System.DateTime> ExpenseMonth { get; set; }
         public Nullable<int> VendorId { get; set; }
         public Nullable<decimal> Expenses { get; set; }
+    
+        public virtual Vendor Vendor { get; set; }
     }
 }

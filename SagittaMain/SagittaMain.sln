@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "..\06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaDB.Models", "..\SagittaDB.Models\SagittaDB.Models.csproj", "{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaDB.Models", "..\SagittaDB.Models\SagittaDB.Models.csproj", "{81376967-06C1-46B4-92A4-76F5E4C60615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,10 @@ Global
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C71F502-B7FF-4787-B0AB-D2B410D92DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81376967-06C1-46B4-92A4-76F5E4C60615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81376967-06C1-46B4-92A4-76F5E4C60615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81376967-06C1-46B4-92A4-76F5E4C60615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81376967-06C1-46B4-92A4-76F5E4C60615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
