@@ -30,32 +30,20 @@ namespace SagittaMain
 
         private void ReportEndDate_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            var calendar = sender as Calendar;
-
-            //TODO: Make check for null
-            if (calendar.SelectedDate.HasValue)
+            if (ReportEndDate.SelectedDate.HasValue)
             {
-                var date = calendar.SelectedDate.GetValueOrDefault(DateTime.Now);
-                var box = this.FindName("EndDateBox") as TextBox;
-
-                //TODO: Make check for null
-                box.Text = date.ToShortDateString();
+                var date = ReportEndDate.SelectedDate.GetValueOrDefault(DateTime.Now);
+                EndDateBox.Text = date.ToShortDateString();
                 Utility.ReportEndDate = date;
             }
         }
 
         private void ReportStartDate_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            var calendar = sender as Calendar;
-
-            //TODO: Make check for null
-            if (calendar.SelectedDate.HasValue)
+            if (ReportEndDate.SelectedDate.HasValue)
             {
-                var date = calendar.SelectedDate.GetValueOrDefault(DateTime.Now);
-                var box = this.FindName("StartDateBox") as TextBox;
-
-                //TODO: Make check for null
-                box.Text = date.ToShortDateString();
+                var date = ReportEndDate.SelectedDate.GetValueOrDefault(DateTime.Now);
+                StartDateBox.Text = date.ToShortDateString();
                 Utility.ReportStartDate = date;
             }
         }
@@ -63,41 +51,26 @@ namespace SagittaMain
         private void MakeReportButton_OnClick(object sender, RoutedEventArgs e)
         {
             var isSaved = Utility.SaveReportsInOutputFolder();
-            if (isSaved)
-            {
-                MessageBox.Show("Reports are done!");
-            }
-            else
-            {
-                MessageBox.Show("We have probel with connections, plese try again later!");
-            }
+            MessageBox.Show(isSaved
+                ? "Reports are done!"
+                : "We have probel with connections, plese try again later!");
         }
 
         private void SendReportButton_OnClick(object sender, RoutedEventArgs e)
         {
             var process = Utility.StartMongoServer();
             var isOnTheServer = Utility.SendReportToMongo(process);
-            if (isOnTheServer)
-            {
-                MessageBox.Show("Your data are on the server now!");
-            }
-            else
-            {
-                MessageBox.Show("We have problem with connection! Please try again later!");
-            }
+            MessageBox.Show(isOnTheServer
+                ? "Your data are on the server now!"
+                : "We have problem with connection! Please try again later!");
         }
 
         private void MakeCalendars()
         {
-            // TODO: Set dates wit first and last date form db
-            var endCalendar = this.FindName("ReportEndDate") as Calendar;
-            var startCalendar = this.FindName("ReportStartDate") as Calendar;
-
-            // TODO: Check for null
-            endCalendar.DisplayDateStart = Utility.CalendarStartDate;
-            startCalendar.DisplayDateStart = Utility.CalendarStartDate;
-            endCalendar.DisplayDateEnd = Utility.CalendarEndDate;
-            startCalendar.DisplayDateEnd = Utility.CalendarEndDate;
+            ReportEndDate.DisplayDateStart = Utility.CalendarStartDate;
+            ReportStartDate.DisplayDateStart = Utility.CalendarStartDate;
+            ReportEndDate.DisplayDateEnd = Utility.CalendarEndDate;
+            ReportStartDate.DisplayDateEnd = Utility.CalendarEndDate;
         }
     }
 }
