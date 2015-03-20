@@ -6,6 +6,6 @@
         public const string DbName = "Reports";
         public const string BaseColectionName = "SalesByProductReports";
         public const string Dbpath = @"c:\data\db";
-        public const string ReportsFolder = @"c:\reports";
+        public const string ReportsFolder = @"..\..\..\OutputFiles\SqlToJson\reports";
     }
 }
