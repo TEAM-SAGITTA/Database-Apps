@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fa945d784d9c4ce483f28e3835407c3a" Name="Diagram1">
-        <EntityTypeShape EntityType="SagittaDBModel.ExpensesByMonth" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SagittaDBModel.ExpensesByMonth" Width="1.5" PointX="2.875" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="SagittaDBModel.Measure" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SagittaDBModel.Product" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SagittaDBModel.SalesReport" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />

@@ -95,7 +95,6 @@ G:\SotUni\DbProject\SagittaMain\bin\Release\SagittaMain.exe
 G:\SotUni\DbProject\SagittaMain\bin\Release\SagittaMain.pdb
 G:\SotUni\DbProject\SagittaMain\bin\Release\02.ZipReports_To_MSSQL.dll
 G:\SotUni\DbProject\SagittaMain\bin\Release\04.XML_SalesReport.dll
-G:\SotUni\DbProject\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.dll
 G:\SotUni\DbProject\SagittaMain\bin\Release\07.MSSQL _to_MySQL.dll
 G:\SotUni\DbProject\SagittaMain\bin\Release\EntityFramework.dll
 G:\SotUni\DbProject\SagittaMain\bin\Release\EntityFramework.SqlServer.dll
@@ -113,7 +112,6 @@ G:\SotUni\DbProject\SagittaMain\bin\Release\02.ZipReports_To_MSSQL.pdb
 G:\SotUni\DbProject\SagittaMain\bin\Release\04.XML_SalesReport.pdb
 G:\SotUni\DbProject\SagittaMain\bin\Release\07.MSSQL _to_MySQL.pdb
 G:\SotUni\DbProject\SagittaMain\bin\Release\Task5.pdb
-G:\SotUni\DbProject\SagittaMain\bin\Release\06.Xml_To_Sql_Server_Loader.pdb
 G:\SotUni\DbProject\SagittaMain\bin\Release\EntityFramework.xml
 G:\SotUni\DbProject\SagittaMain\bin\Release\EntityFramework.SqlServer.xml
 G:\SotUni\DbProject\SagittaMain\bin\Release\MongoDB.Bson.xml
@@ -179,3 +177,5 @@ C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\System.Data.SQLit
 C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.pdb
 C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.MySQL.pdb
 C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\Newtonsoft.Json.xml
+G:\SotUni\DbProject\SagittaMain\bin\Release\Task6.dll
+G:\SotUni\DbProject\SagittaMain\bin\Release\Task6.pdb

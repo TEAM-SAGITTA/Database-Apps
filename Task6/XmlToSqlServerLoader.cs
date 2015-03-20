@@ -16,7 +16,7 @@
             using (var context = new SagittaDBEntities())
             {
                 var dbVendors = context.Vendors;
-                var dbExpensesByMonth = context.ExpensesByMonths;
+               
                 foreach (XmlNode vendor in xmlVendors)
                 {
                     var vendorName = vendor.Attributes["name"].Value;
@@ -37,7 +37,7 @@
                             VendorId = vendorId
                         };
 
-                        dbExpensesByMonth.Add(expenceEntity);
+                        context.ExpensesByMonths.Add(expenceEntity);
                     }
                 }
             }
