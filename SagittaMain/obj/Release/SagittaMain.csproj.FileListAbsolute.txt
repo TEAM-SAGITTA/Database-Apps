@@ -86,3 +86,5 @@ D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Release\SagittaMain.g.reso
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Release\SagittaMain.Properties.Resources.resources
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Release\SagittaMain.Resources.DbsPics.Resources.resources
 D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
+D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\bin\Release\Newtonsoft.Json.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\SagittaMain\bin\Release\Newtonsoft.Json.xml
