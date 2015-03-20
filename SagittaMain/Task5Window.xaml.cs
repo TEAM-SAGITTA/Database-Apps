@@ -40,9 +40,9 @@ namespace SagittaMain
 
         private void ReportStartDate_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ReportEndDate.SelectedDate.HasValue)
+            if (ReportStartDate.SelectedDate.HasValue)
             {
-                var date = ReportEndDate.SelectedDate.GetValueOrDefault(DateTime.Now);
+                var date = ReportStartDate.SelectedDate.GetValueOrDefault(DateTime.Now);
                 StartDateBox.Text = date.ToShortDateString();
                 Utility.ReportStartDate = date;
             }

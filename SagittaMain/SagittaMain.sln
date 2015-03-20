@@ -11,11 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.XML_SalesReport", "..\04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "..\Task3\Task3.csproj", "{19BE847E-1BA0-410D-9D6F-9E4FB663E45B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{F4CED4ED-08A5-4041-BE20-4938E5F34C87}"
-	ProjectSection(SolutionItems) = preProject
-		TextFile1.txt = TextFile1.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ZipReports_To_MSSQL", "..\02.ZipReports_To_MSSQL\02.ZipReports_To_MSSQL.csproj", "{6269BD12-EB21-4681-846B-FE9143FB4941}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csproj", "{673A32D9-90A8-4FEE-987D-18466DC7F3A5}"
