@@ -35,7 +35,7 @@
             </Button.Background>
         </Button>
 <!--        <Button Content="#5_2" Grid.Column="1" HorizontalAlignment="Left" Margin="165,409,0,0" VerticalAlignment="Top" Width="54" Background="#FF0B0BDE" Opacity="0.2" Height="42" Click="Button_Click_4" Cursor="Hand" ToolTip="Import from JSON to MongoDB"/>-->
-        <Button Content="#7" Height="57" Margin="407,336,0,0" VerticalAlignment="Top" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_5" Cursor="Hand" ToolTip="Export from MS SQL Server to MySQL Server"/>
+        <Button Content="#7" Height="57" Margin="407,336,0,0" VerticalAlignment="Top" Background="#FF0B0BDE" Opacity="0.2" Click="LoadDataFromSQLServerToMySQL" Cursor="Hand" ToolTip="Export from MS SQL Server to MySQL Server"/>
         <Button Content="#8_1" HorizontalAlignment="Left" Height="44" Margin="312,451,0,0" VerticalAlignment="Top" Width="60" Opacity="0.2" Background="#FF0B0BDE" Click="Button_Click_6" Cursor="Hand" ToolTip="Export from MySQL to Excel File"/>
         <Button Content="#8_2" HorizontalAlignment="Left" Height="44" Margin="133,451,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.2" Cursor="Hand" ToolTip="Export from SQLite to Excel File" Click="Button_Click_8"/>
         <Button Content="#2_1" HorizontalAlignment="Left" Height="44" Margin="289,256,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.2" Cursor="Hand" ToolTip="Import from Oracle to MS SQL Server" Click="Button_Click_7"/>

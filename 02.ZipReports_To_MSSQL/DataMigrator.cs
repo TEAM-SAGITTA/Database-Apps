@@ -156,6 +156,7 @@
                     }
                     else
                     {
+                        // todo add new product
                         //supermarketContext.Products.Add(new Product()
                         //{
                         //    Product_Name = productName,

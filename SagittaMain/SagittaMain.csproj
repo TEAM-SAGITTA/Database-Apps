@@ -210,6 +210,10 @@
       <Project>{4998181b-67f5-4f3b-87d6-455a021571e4}</Project>
       <Name>04.XML_SalesReport</Name>
     </ProjectReference>
+    <ProjectReference Include="..\07.MSSQL _to_MySQL\07.MSSQL _to_MySQL.csproj">
+      <Project>{f8e6bd7b-cfa0-413d-b72c-922a79e888c4}</Project>
+      <Name>07.MSSQL _to_MySQL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
       <Project>{673A32D9-90A8-4FEE-987D-18466DC7F3A5}</Project>
       <Name>Task5</Name>

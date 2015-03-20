@@ -24,8 +24,7 @@
     using _02.ZipReports_To_MSSQL;
     using _06.Xml_To_Sql_Server_Loader;
     using _04.XML_SalesReport;
-
-
+    using _07.MSSQL__to_MySQL;
 
     public partial class MainWindow : Window
     {
@@ -61,7 +60,7 @@
             {
                 MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to load the data from: {0} ?", filePath),
                     "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                
+
                 if (confirmation == MessageBoxResult.Yes)
                 {
                     try
@@ -73,8 +72,8 @@
                     {
                         MessageBox.Show("Data loading falied!\n" + exception.Message);
                     }
-                }   
-            } 
+                }
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -91,8 +90,10 @@
             //DataGeterForJSONReport.
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void LoadDataFromSQLServerToMySQL(object sender, RoutedEventArgs e)
         {
+            MySqlDataMigrator dataMigrator = new MySqlDataMigrator();
+            dataMigrator.MigrateDataSqlServerToFromMySql();
             MessageBox.Show("MS SQL to MySQL Magic !!!");
         }
 
@@ -140,7 +141,7 @@
         private static string FilePathPicker(string fileExtension)
         {
             Microsoft.Win32.OpenFileDialog filePicker = new Microsoft.Win32.OpenFileDialog();
-            if (fileExtension != "all" )
+            if (fileExtension != "all")
             {
                 filePicker.DefaultExt = fileExtension.ToString();
                 filePicker.Filter = string.Format("XML files (*{0})|*{0}", fileExtension);
