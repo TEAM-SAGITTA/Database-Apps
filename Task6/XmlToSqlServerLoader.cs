@@ -1,9 +1,7 @@
-﻿namespace _06.Xml_To_Sql_Server_Loader
+﻿namespace Task6
 {
     using SagittaDB.Models;
     using System;
-    using System.Data.SqlClient;
-    using System.IO;
     using System.Linq;
     using System.Xml;
     public class XmlToSqlServerLoader

@@ -1,4 +1,6 @@
-﻿namespace SagittaMain
+﻿using Task6;
+
+namespace SagittaMain
 {
     using System;
     using System.Collections.Generic;
@@ -22,7 +24,6 @@
     using System.Diagnostics;
     using System.Reflection;
     using _02.ZipReports_To_MSSQL;
-    using _06.Xml_To_Sql_Server_Loader;
     using _04.XML_SalesReport;
     using _07.MSSQL__to_MySQL;
 

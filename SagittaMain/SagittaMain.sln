@@ -15,13 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ZipReports_To_MSSQL", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5", "..\Task5\Task5.csproj", "{673A32D9-90A8-4FEE-987D-18466DC7F3A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Xml_To_Sql_Server_Loader", "..\06.Xml_To_Sql_Server_Loader\06.Xml_To_Sql_Server_Loader.csproj", "{513D6ABC-9F65-4C57-AA80-3423519253F8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaDB.Models", "..\SagittaDB.Models\SagittaDB.Models.csproj", "{81376967-06C1-46B4-92A4-76F5E4C60615}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.MSSQL _to_MySQL", "..\07.MSSQL _to_MySQL\07.MSSQL _to_MySQL.csproj", "{F8E6BD7B-CFA0-413D-B72C-922A79E888C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagittaDB.Models.MySQL", "..\SagittaDB.Models.MySQL\SagittaDB.Models.MySQL.csproj", "{3E76C445-609C-4871-8916-3649AFC95FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task6", "..\Task6\Task6.csproj", "{403F8769-FAF6-403C-8EA0-9D00C487D9D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,6 @@ Global
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673A32D9-90A8-4FEE-987D-18466DC7F3A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{513D6ABC-9F65-4C57-AA80-3423519253F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81376967-06C1-46B4-92A4-76F5E4C60615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81376967-06C1-46B4-92A4-76F5E4C60615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81376967-06C1-46B4-92A4-76F5E4C60615}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{3E76C445-609C-4871-8916-3649AFC95FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E76C445-609C-4871-8916-3649AFC95FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E76C445-609C-4871-8916-3649AFC95FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403F8769-FAF6-403C-8EA0-9D00C487D9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403F8769-FAF6-403C-8EA0-9D00C487D9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403F8769-FAF6-403C-8EA0-9D00C487D9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403F8769-FAF6-403C-8EA0-9D00C487D9D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

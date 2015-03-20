@@ -37,3 +37,13 @@ C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\EntityFr
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll.config
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.pdb
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.dll
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.xml
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
+C:\Users\Presian\Desktop\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb

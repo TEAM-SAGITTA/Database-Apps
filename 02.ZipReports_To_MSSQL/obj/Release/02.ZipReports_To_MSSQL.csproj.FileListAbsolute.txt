@@ -50,3 +50,16 @@ C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.Z
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb
 G:\SotUni\DbProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
 G:\SotUni\DbProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.dll.config
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.pdb
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.xml
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.dll
+C:\Users\Presian\Desktop\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb
