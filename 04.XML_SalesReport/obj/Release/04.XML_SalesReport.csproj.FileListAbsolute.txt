@@ -33,3 +33,8 @@ C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\EntityFr
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll.config
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\EntityFramework.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.dll
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\EntityFramework.xml
+D:\SoftUni\TeamWork\Databases\GitRepo\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
