@@ -17,8 +17,6 @@ G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.pd
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.dll
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.dll
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\ICSharpCode.SharpZipLib.dll
-G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\MSSql.Data.dll
-G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\MSSql.Data.pdb
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.xml
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.xml
 G:\SotUni\DBProject\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
@@ -50,3 +48,5 @@ C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\Enti
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb
+G:\SotUni\DbProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
+G:\SotUni\DbProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb

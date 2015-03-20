@@ -21,8 +21,6 @@ G:\SotUni\DBProject\Task5\bin\Release\EntityFramework.dll
 G:\SotUni\DBProject\Task5\bin\Release\EntityFramework.SqlServer.dll
 G:\SotUni\DBProject\Task5\bin\Release\MongoDB.Bson.dll
 G:\SotUni\DBProject\Task5\bin\Release\MongoDB.Driver.dll
-G:\SotUni\DBProject\Task5\bin\Release\MSSql.Data.dll
-G:\SotUni\DBProject\Task5\bin\Release\MSSql.Data.pdb
 G:\SotUni\DBProject\Task5\bin\Release\EntityFramework.xml
 G:\SotUni\DBProject\Task5\bin\Release\EntityFramework.SqlServer.xml
 G:\SotUni\DBProject\Task5\bin\Release\MongoDB.Bson.xml
@@ -64,3 +62,7 @@ C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.pdb
 D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\Newtonsoft.Json.dll
 D:\SoftUni\TeamWork\Databases\GitRepo\Task5\bin\Release\Newtonsoft.Json.xml
+G:\SotUni\DbProject\Task5\bin\Release\Newtonsoft.Json.dll
+G:\SotUni\DbProject\Task5\bin\Release\SagittaDB.Models.dll
+G:\SotUni\DbProject\Task5\bin\Release\SagittaDB.Models.pdb
+G:\SotUni\DbProject\Task5\bin\Release\Newtonsoft.Json.xml

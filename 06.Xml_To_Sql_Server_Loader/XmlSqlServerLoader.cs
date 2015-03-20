@@ -1,78 +1,47 @@
 ﻿namespace _06.Xml_To_Sql_Server_Loader
 {
+    using SagittaDB.Models;
     using System;
     using System.Data.SqlClient;
     using System.IO;
+    using System.Linq;
     using System.Xml;
-
-    public class XmlSqlServerLoader
+    public class XmlToSqlServerLoader
     {
-        public static void XmlDataPusher(string DbConnectionString, string filePath)
-        {            
-            using (SqlConnection connection = new SqlConnection(DbConnectionString))
-            {                
-                connection.Open();                
-                if (filePath != string.Empty)
-                {
-                    using (SqlTransaction transaction = connection.BeginTransaction())
-                    {
-                        try
-                        {
-                            XmlSqlServerLoader.PolulateSqlTables(connection, filePath, transaction);
-                            transaction.Commit();
-                        }
-                        catch (Exception exception)
-                        {
-                            transaction.Rollback();
-                            throw exception;
-                        }
-                    }
-
-                    connection.Close();                  
-                }
-            }
-        }
-
-        public static void PolulateSqlTables(SqlConnection connection, string filePath, SqlTransaction transaction)
+        public static void PolulateSqlTables(string filePath)
         {
-            string firstTableName = "Vendors";
-            string secondTableName = "ExpensesByMonth";
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(filePath);
             XmlElement root = xmlDoc.DocumentElement;
-            string RootPath = "/expenses-by-month/vendor";
-            string RootAtribute = "name";
-            string childName = "expenses";
-            string childAtribute = "month";
-            XmlNodeList rootNodes = root.SelectNodes(RootPath);
-            var nodeId = 1;
+            XmlNodeList xmlVendors = root.SelectNodes("/expenses-by-month/vendor");
 
-            foreach (XmlNode vendor in rootNodes)
+            using (var context = new SagittaDBEntities())
             {
-                var RootAtributeValue = vendor.Attributes[RootAtribute].Value;
-                var insertStringCmd = string.Format("INSERT INTO {0} VALUES('{1}')", firstTableName, RootAtributeValue);
-                SqlCommand insertVendor = new SqlCommand(insertStringCmd, connection, transaction);
-                insertVendor.ExecuteNonQuery();
-                XmlNodeList childNodes = vendor.SelectNodes(childName);
-
-                for (int i = 0; i < childNodes.Count; i++)
+                var dbVendors = context.Vendors;
+                var dbExpensesByMonth = context.ExpensesByMonths;
+                foreach (XmlNode vendor in xmlVendors)
                 {
-                    var expense = childNodes[i];
-                    var expenceMonth = expense.Attributes[childAtribute].Value;
-                    var expenceDate = DateTime.Parse(expenceMonth);
-                    var expenceValue = decimal.Parse(childNodes[i].InnerText);
+                    var vendorName = vendor.Attributes["name"].Value;
+                    XmlNodeList expenses = vendor.SelectNodes("expenses");
+                    for (int i = 0; i < expenses.Count; i++)
+                    {
+                        var expense = expenses[i];
+                        var expenceMonth = expense.Attributes["month"].Value;
+                        var expenceDate = DateTime.Parse(expenceMonth);
+                        var expenceSum = decimal.Parse(expenses[i].InnerText);
+                        var vendorID = int.Parse(dbVendors.Where(v => v.Vendor_Name == vendorName).Select(v => v.ID).ToString());
+                        var expenceEntity = new ExpensesByMonth()
+                        {
+                            ExpenseMonth = expenceDate,
+                            Expenses = expenceSum,
+                            VendorId = vendorID
+                        };
 
-                    string insertChildsStr = string.Format("INSERT INTO {0} VALUES(@Date, {1}, @Money)",
-                        secondTableName, nodeId);
-
-                    SqlCommand inserChilds = new SqlCommand(insertChildsStr, connection, transaction);                    
-                    inserChilds.Parameters.AddWithValue("@Money", expenceValue);
-                    inserChilds.Parameters.AddWithValue("@Date", expenceDate);
-                    inserChilds.ExecuteNonQuery();
+                        dbExpensesByMonth.Add(expenceEntity);
+                    }
                 }
-
-                nodeId++;
             }
         }
+
     }
 }
