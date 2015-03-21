@@ -4,8 +4,6 @@ D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\02.Zip
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.dll
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.dll
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\ICSharpCode.SharpZipLib.dll
-D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\MSSql.Data.dll
-D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\MSSql.Data.pdb
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.xml
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.xml
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
@@ -63,3 +61,5 @@ C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\bin\Release\Enti
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
+D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb

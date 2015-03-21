@@ -3,8 +3,6 @@ D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\Task5.dll
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\Task5.pdb
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\EntityFramework.dll
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\EntityFramework.SqlServer.dll
-D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\MSSql.Data.dll
-D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\MSSql.Data.pdb
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\EntityFramework.xml
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\EntityFramework.SqlServer.xml
 D:\SoftUni\TeamWork\Databases\GitClone\Task5\obj\Release\Task5.csprojResolveAssemblyReference.cache
@@ -86,3 +84,7 @@ C:\Users\Joro\Desktop\Team\Database-Apps\Task5\bin\Release\Newtonsoft.Json.xml
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\Task5\obj\Release\Task5.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\Newtonsoft.Json.dll
+D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\SagittaDB.Models.dll
+D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\SagittaDB.Models.pdb
+D:\SoftUni\TeamWork\Databases\GitClone\Task5\bin\Release\Newtonsoft.Json.xml

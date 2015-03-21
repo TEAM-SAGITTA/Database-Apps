@@ -27,9 +27,9 @@
                         var expenceMonth = expense.Attributes["month"].Value;
                         var expenceDate = DateTime.Parse(expenceMonth);
                         var expenceSum = decimal.Parse(expenses[i].InnerText);
-                        var vendorId = int.Parse(dbVendors
+                        var vendorId = dbVendors
                             .Where(v => v.Vendor_Name == vendorName)
-                            .Select(v => v.ID).ToString());
+                            .Select(v => v.ID).SingleOrDefault();
                         var expenceEntity = new ExpensesByMonth()
                         {
                             ExpenseMonth = expenceDate,
