@@ -38,6 +38,7 @@
                         };
 
                         context.ExpensesByMonths.Add(expenseEntity);
+                        context.SaveChanges();
                     }
                 }
             }
