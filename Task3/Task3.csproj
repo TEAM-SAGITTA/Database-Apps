@@ -68,19 +68,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataPdfModel.cs">
+    <Compile Include="DataForPdfModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataPdfModel.tt</DependentUpon>
+      <DependentUpon>DataForPdfModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataForPdfModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataForPdfModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataForPdfModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensesByMonth.cs">
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Measure.cs">
-      <DependentUpon>DataPdfModel.tt</DependentUpon>
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>DataPdfModel.tt</DependentUpon>
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport.cs">
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supermarket.cs">
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Vendor.cs">
-      <DependentUpon>DataPdfModel.tt</DependentUpon>
+      <DependentUpon>DataForPdfModel.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -89,16 +108,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DataPdfModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataPdfModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataPdfModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataPdfModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -123,22 +132,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DataPdfModel.edmx">
+    <EntityDeploy Include="DataForPdfModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataPdfModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataForPdfModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataPdfModel.Context.tt">
+    <None Include="DataForPdfModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataPdfModel.edmx</DependentUpon>
-      <LastGenOutput>DataPdfModel.Context.cs</LastGenOutput>
+      <DependentUpon>DataForPdfModel.edmx</DependentUpon>
+      <LastGenOutput>DataForPdfModel.Context.cs</LastGenOutput>
     </None>
-    <None Include="DataPdfModel.edmx.diagram">
-      <DependentUpon>DataPdfModel.edmx</DependentUpon>
+    <None Include="DataForPdfModel.edmx.diagram">
+      <DependentUpon>DataForPdfModel.edmx</DependentUpon>
     </None>
-    <None Include="DataPdfModel.tt">
+    <None Include="DataForPdfModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataPdfModel.edmx</DependentUpon>
-      <LastGenOutput>DataPdfModel.cs</LastGenOutput>
+      <DependentUpon>DataForPdfModel.edmx</DependentUpon>
+      <LastGenOutput>DataForPdfModel.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

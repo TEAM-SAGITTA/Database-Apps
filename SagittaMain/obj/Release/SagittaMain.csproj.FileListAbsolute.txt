@@ -179,3 +179,6 @@ C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.
 C:\Users\Presian\Desktop\Database-Apps\SagittaMain\bin\Release\Newtonsoft.Json.xml
 G:\SotUni\DbProject\SagittaMain\bin\Release\Task6.dll
 G:\SotUni\DbProject\SagittaMain\bin\Release\Task6.pdb
+C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaMain.exe.config
+C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.exe
+C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.pdb

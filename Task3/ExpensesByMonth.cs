@@ -12,21 +12,13 @@ namespace Task3
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class ExpensesByMonth
     {
-        public Product()
-        {
-            this.SalesReports = new HashSet<SalesReport>();
-        }
+        public int Id { get; set; }
+        public Nullable<System.DateTime> ExpenseMonth { get; set; }
+        public Nullable<int> VendorId { get; set; }
+        public Nullable<decimal> Expenses { get; set; }
     
-        public int ID { get; set; }
-        public int VendorID { get; set; }
-        public string Product_Name { get; set; }
-        public int MeasureID { get; set; }
-        public decimal Price { get; set; }
-    
-        public virtual Measure Measure { get; set; }
         public virtual Vendor Vendor { get; set; }
-        public virtual ICollection<SalesReport> SalesReports { get; set; }
     }
 }

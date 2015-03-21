@@ -109,14 +109,15 @@
 
         private void MakePdfReportButton_OnClick(object sender, EventArgs e)
         {
-            var db = new TeamWorkEntities();
+            var db = new SagittaDBEntities();
             var dbProductEntities = db.Products;
             //SqlCommand allProducts = new SqlCommand("SELECT * FROM Products", db);
+
             DataRow dr = GetData("SELECT * FROM Products where VendorId = 10").Rows[0];
             Document document = new Document(PageSize.A4, 88f, 88f, 10f, 10f);
             Font NormalFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
 
-            using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
+            using (MemoryStream memoryStream = new MemoryStream())
             {
                 PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
                 Phrase phrase = null;
@@ -125,6 +126,19 @@
                 //Color color = null;
 
                 document.Open();
+
+                //Header table
+                table = new PdfPTable(2);
+                table.TotalWidth = 50f;
+                table.LockedWidth = true;
+                table.SetWidths(new float[] { 0.3f, 0.7f });
+
+                //Separater Line
+                DrawLine(writer, 25f, document.Top - 79f, document.PageSize.Width - 25f, document.Top - 79f);
+                DrawLine(writer, 25f, document.Top - 80f, document.PageSize.Width - 25f, document.Top - 80f);
+                document.Add(table);
+
+
 
                 HttpContext.Current.Response.ContentType = "application/pdf";
                 HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
@@ -155,7 +169,7 @@
 
         private DataTable GetData(string query)
         {
-            string conString = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            string conString = ConfigurationManager.ConnectionStrings["SagittaDBEntities"].ConnectionString;
 
             SqlCommand cmd = new SqlCommand(query);
             using (SqlConnection con = new SqlConnection(conString))
@@ -172,6 +186,14 @@
                     }
                 }
             }
+        }
+
+        private static void DrawLine(PdfWriter writer, float x1, float y1, float x2, float y2)
+        {
+            PdfContentByte contentByte = writer.DirectContent;
+            contentByte.MoveTo(x1, y1);
+            contentByte.LineTo(x2, y2);
+            contentByte.Stroke();
         }
 
     }

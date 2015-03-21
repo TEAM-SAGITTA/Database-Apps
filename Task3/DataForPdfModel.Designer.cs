@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\cosmicbeat\Documents\Visual Studio 2013\Projects\sagitha\Task3\DataPdfModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\malina\Documents\GitHub\Database-Apps\Task3\DataForPdfModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

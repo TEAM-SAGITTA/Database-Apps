@@ -13,10 +13,10 @@ namespace Task3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TeamWorkEntities : DbContext
+    public partial class SagittaDBEntities : DbContext
     {
-        public TeamWorkEntities()
-            : base("name=TeamWorkEntities")
+        public SagittaDBEntities()
+            : base("name=SagittaDBEntities")
         {
         }
     
@@ -25,8 +25,11 @@ namespace Task3
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ExpensesByMonth> ExpensesByMonths { get; set; }
         public virtual DbSet<Measure> Measures { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<SalesReport> SalesReports { get; set; }
+        public virtual DbSet<Supermarket> Supermarkets { get; set; }
         public virtual DbSet<Vendor> Vendors { get; set; }
     }
 }
