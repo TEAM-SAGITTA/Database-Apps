@@ -8,7 +8,7 @@
     using System.Linq;
     using ICSharpCode.SharpZipLib.Core;
     using ICSharpCode.SharpZipLib.Zip;
-   
+
     using _02.ZipReports_To_MSSQL.Properties;
     using SagittaDB.Models;
 

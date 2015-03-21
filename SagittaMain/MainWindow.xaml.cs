@@ -39,7 +39,7 @@ namespace SagittaMain
             MessageBox.Show("Product Data to Oracle Magic !!!");
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void LoadDataFromExcelFiles(object sender, RoutedEventArgs e)
         {
             DataMigrator dataMigrator = new DataMigrator();
             dataMigrator.MigrateDataFromExcelFiles();

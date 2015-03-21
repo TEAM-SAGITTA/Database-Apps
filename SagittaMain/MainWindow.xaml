@@ -9,7 +9,7 @@
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill" Margin="0,0,0,-2" Grid.ColumnSpan="2"/>
         <Button Content="#1" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Cursor="Hand" ToolTip="Product Data to Oralce" Opacity="0.2" Height="44" Background="#FF0B0BDE"/>
-        <Button Content="#2_1" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="Button_Click_1" Cursor="Hand" Height="55" Background="#FF0B0BDE" Opacity="0.2" ToolTip="Import from Zip file to MS SQL Server"/>
+        <Button Content="#2_1" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="LoadDataFromExcelFiles" Cursor="Hand" Height="55" Background="#FF0B0BDE" Opacity="0.2" ToolTip="Import from Zip file to MS SQL Server"/>
         <Button Content="#3" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2" Cursor="Hand" Grid.Column="1" ToolTip="MS SQL Server to PDF file"/>
         <Viewbox HorizontalAlignment="Left" Margin="368,49,0,0" VerticalAlignment="Top" Width="100" Height="93" Stretch="Fill" Grid.ColumnSpan="2">
             <Button Content="" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100" Cursor="Hand" Opacity="1" ToolTip="Import Data From XML to MS SQL Server">
