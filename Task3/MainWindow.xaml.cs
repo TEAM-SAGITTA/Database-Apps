@@ -19,6 +19,7 @@
     using System.Windows.Shapes;
     using System.Web;
 
+
     using iTextSharp.text;
     using iTextSharp.text.pdf;
     using System.Data;
@@ -138,16 +139,18 @@
                 DrawLine(writer, 25f, document.Top - 80f, document.PageSize.Width - 25f, document.Top - 80f);
                 document.Add(table);
 
+                System.Web.HttpResponse response = System.Web.HttpContext.Current.Response;
 
-
-                HttpContext.Current.Response.ContentType = "application/pdf";
-                HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
-                HttpContext.Current.Response.ContentType = "application/pdf";
-                HttpContext.Current.Response.Buffer = true;
-                HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                response.ClearContent();
+                response.Clear();
+                response.ContentType = "application/pdf";
+                response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
+                response.ContentType = "application/pdf";
+                response.Buffer = true;
+                response.Cache.SetCacheability(HttpCacheability.NoCache);
                // HttpContext.Current.Response.BinaryWrite();
-                HttpContext.Current.Response.End();
-                HttpContext.Current.Response.Close();
+                response.End();
+                response.Close();
             }
             //using (TeamWorkEntities cn = new TeamWorkEntities())
             //{
