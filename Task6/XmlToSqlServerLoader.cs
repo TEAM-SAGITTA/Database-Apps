@@ -29,19 +29,18 @@
                         var expenceSum = decimal.Parse(expenses[i].InnerText);
                         var vendorId = dbVendors
                             .Where(v => v.Vendor_Name == vendorName)
-                            .Select(v => v.ID).SingleOrDefault();
-                        var expenceEntity = new ExpensesByMonth()
+                            .Select(v => v.ID).FirstOrDefault();
+                        var expenseEntity = new ExpensesByMonth()
                         {
                             ExpenseMonth = expenceDate,
                             Expenses = expenceSum,
                             VendorId = vendorId
                         };
 
-                        context.ExpensesByMonths.Add(expenceEntity);
+                        context.ExpensesByMonths.Add(expenseEntity);
                     }
                 }
             }
         }
-
     }
 }

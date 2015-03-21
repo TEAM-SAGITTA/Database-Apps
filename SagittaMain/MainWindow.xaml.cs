@@ -69,6 +69,7 @@ namespace SagittaMain
                     }
                     catch (Exception exception)
                     {
+                        //throw exception; //TODO DELETE THIS
                         MessageBox.Show("Data loading falied!\n" + exception.Message);
                     }
                 }
