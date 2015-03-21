@@ -1,13 +1,23 @@
 ﻿namespace Task3
 {
+    using iTextSharp.text;
+    using iTextSharp.text.html.simpleparser;
+    using iTextSharp.text.pdf;
+    using iTextSharp.text.pdf.draw;
     using System;
     using System.Collections.Generic;
-    using System.Data.SqlClient;
+    using System.Configuration;
+    using System.Data;
     using System.Data.Entity;
+    using System.Data.SqlClient;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Web;
+    using System.Web.Http;
+    using System.Web.UI;
     using System.Windows;
     using System.Windows.Controls;
     using System.Windows.Data;
@@ -17,17 +27,6 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Navigation;
     using System.Windows.Shapes;
-    using System.Web;
-    using System.Web.UI;
-
-
-    using iTextSharp.text;
-    using iTextSharp.text.pdf;
-    using iTextSharp.text.pdf.draw;
-    using System.Data;
-    using System.Diagnostics;
-    using System.Configuration;
-    using iTextSharp.text.html.simpleparser;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -124,18 +123,21 @@
 
             using (MemoryStream memoryStream = new MemoryStream())
             {
-                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
-                System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
+                var writer = PdfWriter.GetInstance(document, memoryStream);
+               // System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
 
-                Phrase phrase = null;
-                PdfPCell cell = null;
-                PdfPTable table = null;
+                
+
+                //var phrase;
+                //var cell;
+                //var table;
                 //Color color = null;
 
                 document.Open();
+                document.NewPage();
 
                 //Header table
-                table = new PdfPTable(2);
+                var table = new PdfPTable(2);
                 table.TotalWidth = 50f;
                 table.LockedWidth = true;
                 table.SetWidths(new float[] { 0.3f, 0.7f });
@@ -151,7 +153,7 @@
                 table.SpacingBefore = 20f;
 
                 //Vendor Details
-                cell = PhraseCell(new Phrase("Vendor Record", FontFactory.GetFont("Arial", 12, Font.UNDERLINE)), PdfPCell.ALIGN_CENTER);
+                var cell = PhraseCell(new Phrase("Vendor Record", FontFactory.GetFont("Arial", 12, Font.UNDERLINE)), PdfPCell.ALIGN_CENTER);
                 cell.Colspan = 2;
                 table.AddCell(cell);
                 cell = PhraseCell(new Phrase(), PdfPCell.ALIGN_CENTER);
@@ -160,8 +162,8 @@
                 table.AddCell(cell);
 
                 //Name
-                phrase = new Phrase();
-                phrase.Add(new Chunk(dr["Vendor Name"] + "\n", FontFactory.GetFont("Arial", 10, Font.BOLD)));
+                var phrase = new Phrase();
+                phrase.Add(new Chunk(dr["VendorName"] + "\n", FontFactory.GetFont("Arial", 10, Font.BOLD)));
                 phrase.Add(new Chunk("(" + dr["Title"].ToString() + ")", FontFactory.GetFont("Arial", 8, Font.BOLD)));
                 cell = PhraseCell(phrase, PdfPCell.ALIGN_LEFT);
                 cell.VerticalAlignment = PdfPCell.ALIGN_MIDDLE;
@@ -182,7 +184,7 @@
                 byte[] bytes = memoryStream.ToArray();
                 memoryStream.Close();
 
-                
+                System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
 
                 Response.ClearContent();
                 Response.Clear();
