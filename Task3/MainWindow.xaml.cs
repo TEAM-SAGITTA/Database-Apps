@@ -18,13 +18,16 @@
     using System.Windows.Navigation;
     using System.Windows.Shapes;
     using System.Web;
+    using System.Web.UI;
 
 
     using iTextSharp.text;
     using iTextSharp.text.pdf;
+    using iTextSharp.text.pdf.draw;
     using System.Data;
     using System.Diagnostics;
     using System.Configuration;
+    using iTextSharp.text.html.simpleparser;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -108,6 +111,7 @@
             }
         }
 
+
         private void MakePdfReportButton_OnClick(object sender, EventArgs e)
         {
             var db = new SagittaDBEntities();
@@ -121,6 +125,8 @@
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
+
                 Phrase phrase = null;
                 PdfPCell cell = null;
                 PdfPTable table = null;
@@ -139,18 +145,56 @@
                 DrawLine(writer, 25f, document.Top - 80f, document.PageSize.Width - 25f, document.Top - 80f);
                 document.Add(table);
 
-                System.Web.HttpResponse response = System.Web.HttpContext.Current.Response;
+                table = new PdfPTable(2);
+                table.HorizontalAlignment = Element.ALIGN_LEFT;
+                table.SetWidths(new float[] { 0.3f, 1f });
+                table.SpacingBefore = 20f;
 
-                response.ClearContent();
-                response.Clear();
-                response.ContentType = "application/pdf";
-                response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
-                response.ContentType = "application/pdf";
-                response.Buffer = true;
-                response.Cache.SetCacheability(HttpCacheability.NoCache);
-               // HttpContext.Current.Response.BinaryWrite();
-                response.End();
-                response.Close();
+                //Vendor Details
+                cell = PhraseCell(new Phrase("Vendor Record", FontFactory.GetFont("Arial", 12, Font.UNDERLINE)), PdfPCell.ALIGN_CENTER);
+                cell.Colspan = 2;
+                table.AddCell(cell);
+                cell = PhraseCell(new Phrase(), PdfPCell.ALIGN_CENTER);
+                cell.Colspan = 2;
+                cell.PaddingBottom = 30f;
+                table.AddCell(cell);
+
+                //Name
+                phrase = new Phrase();
+                phrase.Add(new Chunk(dr["Vendor Name"] + "\n", FontFactory.GetFont("Arial", 10, Font.BOLD)));
+                phrase.Add(new Chunk("(" + dr["Title"].ToString() + ")", FontFactory.GetFont("Arial", 8, Font.BOLD)));
+                cell = PhraseCell(phrase, PdfPCell.ALIGN_LEFT);
+                cell.VerticalAlignment = PdfPCell.ALIGN_MIDDLE;
+                table.AddCell(cell);
+                document.Add(table);
+
+                DrawLine(writer, 160f, 80f, 160f, 690f);
+                DrawLine(writer, 115f, document.Top - 200f, document.PageSize.Width - 100f, document.Top - 200f);
+
+                table = new PdfPTable(2);
+                table.SetWidths(new float[] { 0.5f, 2f });
+                table.TotalWidth = 340f;
+                table.LockedWidth = true;
+                table.SpacingBefore = 20f;
+                table.HorizontalAlignment = Element.ALIGN_RIGHT;
+
+                document.Close();
+                byte[] bytes = memoryStream.ToArray();
+                memoryStream.Close();
+
+                
+
+                Response.ClearContent();
+                Response.Clear();
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("Pdf Report", "attachment; filename=Report.pdf");
+                Response.ContentType = "application/pdf";
+                Response.Buffer = true;
+                Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
+                Response.BinaryWrite(bytes);
+                Response.End();
+                Response.Close();
+
             }
             //using (TeamWorkEntities cn = new TeamWorkEntities())
             //{
@@ -197,6 +241,16 @@
             contentByte.MoveTo(x1, y1);
             contentByte.LineTo(x2, y2);
             contentByte.Stroke();
+        }
+
+        private static PdfPCell PhraseCell(Phrase phrase, int align)
+        {
+            PdfPCell cell = new PdfPCell(phrase);
+            cell.VerticalAlignment = PdfPCell.ALIGN_TOP;
+            cell.HorizontalAlignment = align;
+            cell.PaddingBottom = 2f;
+            cell.PaddingTop = 0f;
+            return cell;
         }
 
     }
