@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sales>
+  <sale vendor="Nestle">
+    <summary date="21-Jun-2014" total-sum="5.67" />
+  </sale>
+  <sale vendor="NesCafe">
+    <summary date="21-Jun-2014" total-sum="0.34" />
+  </sale>
+  <sale vendor="Zagorka">
+    <summary date="21-Jun-2014" total-sum="8.71" />
+  </sale>
+  <sale vendor="Vinprom Karnobat">
+    <summary date="21-Jun-2014" total-sum="15.12" />
+  </sale>
+</sales>

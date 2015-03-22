@@ -8,11 +8,11 @@
             <ColumnDefinition Width="343*"/>
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="572" VerticalAlignment="Top" Width="792" Source="Resources/Background.png" Stretch="Fill" Margin="0,0,0,-2" Grid.ColumnSpan="2"/>
-        <Button Content="#1" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Cursor="Hand" ToolTip="Product Data to Oralce" Opacity="0.2" Height="44" Background="#FF0B0BDE"/>
-        <Button Content="#2_1" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="LoadDataFromExcelFiles" Cursor="Hand" Height="55" Background="#FF0B0BDE" Opacity="0.2" ToolTip="Import from Zip file to MS SQL Server"/>
-        <Button Content="#3" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.2" Click="Button_Click_2" Cursor="Hand" Grid.Column="1" ToolTip="MS SQL Server to PDF file"/>
+        <Button Content="#1" HorizontalAlignment="Left" Margin="117,295,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click" Cursor="Hand" ToolTip="Product Data to Oralce" Opacity="0.02" Height="44" Background="#FF0B0BDE"/>
+        <Button Content="#2_1" HorizontalAlignment="Left" Margin="250,163,0,0" VerticalAlignment="Top" Width="97" Click="LoadDataFromExcelFiles" Cursor="Hand" Height="55" Background="#FF0B0BDE" Opacity="0.02" ToolTip="Import from Zip file to MS SQL Server"/>
+        <Button Content="#3" HorizontalAlignment="Left" Margin="39,96,0,0" VerticalAlignment="Top" Width="57" Height="53" Background="#FF0B0BDE" Opacity="0.02" Click="Button_Click_2" Cursor="Hand" Grid.Column="1" ToolTip="MS SQL Server to PDF file"/>
         <Viewbox HorizontalAlignment="Left" Margin="368,49,0,0" VerticalAlignment="Top" Width="100" Height="93" Stretch="Fill" Grid.ColumnSpan="2">
-            <Button Content="" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100" Cursor="Hand" Opacity="1" ToolTip="Import Data From XML to MS SQL Server">
+            <Button Content="" RenderTransformOrigin="0.5,0.5" Click="LoadExpenseDataFromXML" Height="93" Width="100" Cursor="Hand" Opacity="0.01" ToolTip="Import Data From XML to MS SQL Server">
                 <Button.Background>
                     <ImageBrush ImageSource="Resources\ButtonsPics\Button_6.png" />
                 </Button.Background>
@@ -28,16 +28,16 @@
             </Button>
 
         </Viewbox>
-        <Button Content="#4" Grid.Column="1" HorizontalAlignment="Left" Margin="59,215,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" Background="#FF0B0BDE" Opacity="0.2" Height="41" Click="Button_Click_3" Cursor="Hand" ToolTip="MS SQL Server to XML file"/>
-        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="59,295,0,0" VerticalAlignment="Top" Width="52" Opacity="1.0" Height="57" Cursor="Hand" ToolTip="MS SQL Server to JSON" Click="Button_Click_9" BorderThickness="0">
+        <Button Content="#4" Grid.Column="1" HorizontalAlignment="Left" Margin="59,217,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.5,0.5" Background="#FF0B0BDE" Opacity="0.02" Height="41" Click="Button_Click_3" Cursor="Hand" ToolTip="MS SQL Server to XML file"/>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="39,284,0,0" VerticalAlignment="Top" Width="61" Opacity="1.0" Height="74" Cursor="Hand" ToolTip="MS SQL Server to JSON" Click="Button_Click_9" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="Resources\ButtonsPics\Button_5.png" />
             </Button.Background>
         </Button>
-<!--        <Button Content="#5_2" Grid.Column="1" HorizontalAlignment="Left" Margin="165,409,0,0" VerticalAlignment="Top" Width="54" Background="#FF0B0BDE" Opacity="0.2" Height="42" Click="Button_Click_4" Cursor="Hand" ToolTip="Import from JSON to MongoDB"/>-->
-        <Button Content="#7" Height="57" Margin="407,336,0,0" VerticalAlignment="Top" Background="#FF0B0BDE" Opacity="0.2" Click="LoadDataFromSQLServerToMySQL" Cursor="Hand" ToolTip="Export from MS SQL Server to MySQL Server"/>
-        <Button Content="#8_1" HorizontalAlignment="Left" Height="44" Margin="312,451,0,0" VerticalAlignment="Top" Width="60" Opacity="0.2" Background="#FF0B0BDE" Click="Button_Click_6" Cursor="Hand" ToolTip="Export from MySQL to Excel File"/>
-        <Button Content="#8_2" HorizontalAlignment="Left" Height="44" Margin="133,451,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.2" Cursor="Hand" ToolTip="Export from SQLite to Excel File" Click="Button_Click_8"/>
-        <Button Content="#2_1" HorizontalAlignment="Left" Height="44" Margin="289,256,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.2" Cursor="Hand" ToolTip="Import from Oracle to MS SQL Server" Click="Button_Click_7"/>
+        <!--        <Button Content="#5_2" Grid.Column="1" HorizontalAlignment="Left" Margin="165,409,0,0" VerticalAlignment="Top" Width="54" Background="#FF0B0BDE" Opacity="0.2" Height="42" Click="Button_Click_4" Cursor="Hand" ToolTip="Import from JSON to MongoDB"/>-->
+        <Button Content="#7" Height="57" Margin="407,336,0,0" VerticalAlignment="Top" Background="#FF0B0BDE" Opacity="0.02" Click="LoadDataFromSQLServerToMySQL" Cursor="Hand" ToolTip="Export from MS SQL Server to MySQL Server"/>
+        <Button Content="#8_1" HorizontalAlignment="Left" Height="44" Margin="312,451,0,0" VerticalAlignment="Top" Width="60" Opacity="0.02" Background="#FF0B0BDE" Click="Button_Click_6" Cursor="Hand" ToolTip="Export from MySQL to Excel File"/>
+        <Button Content="#8_2" HorizontalAlignment="Left" Height="44" Margin="133,451,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.02" Cursor="Hand" ToolTip="Export from SQLite to Excel File" Click="Button_Click_8"/>
+        <Button Content="#2_1" HorizontalAlignment="Left" Height="44" Margin="289,256,0,0" VerticalAlignment="Top" Width="58" Background="#FF0B0BDE" Opacity="0.02" Cursor="Hand" ToolTip="Import from Oracle to MS SQL Server" Click="Button_Click_7"/>
     </Grid>
 </Window>
