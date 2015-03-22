@@ -146,7 +146,7 @@ namespace SagittaMain
 
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to quit!"),
+            MessageBoxResult confirmation = MessageBox.Show(string.Format("Do you want to quit?"),
                    "Exit confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (confirmation == MessageBoxResult.Yes) 
