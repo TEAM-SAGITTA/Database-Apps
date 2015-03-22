@@ -81,13 +81,19 @@ namespace SagittaMain
         {
             //MessageBox.Show("MS SQL to XML Magic !!!");
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-            XMLHelper xmlFileManager = new XMLHelper();
             var startDate = new DateTime(2000, 1, 1);
             var endDate = new DateTime(2015, 12, 31);
+            startDate = DateTime.Parse(Microsoft.VisualBasic.Interaction.InputBox("Please Enter Start Date - MM.DD.YYYY", "Start Date Input", "01.01.2000"));
+            endDate = DateTime.Parse(Microsoft.VisualBasic.Interaction.InputBox("Please Enter End Date - MM.DD.YYYY", "End Date Input", "12.31.2015"));
+            
+            //var dateWindow = new Task5Window();
+            //dateWindow.Show();
+            XMLHelper xmlFileManager = new XMLHelper();
             var salesReport = xmlFileManager.ReadData(startDate, endDate);
             string XmlResultFileName = @"..\..\SalesByVendorReport.xml";
             xmlFileManager.exportToXML(salesReport, XmlResultFileName);
-            MessageBox.Show("MS SQL Export to XML file has been finished!");
+            MessageBox.Show("MS SQL Export to XML file has been finished!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
