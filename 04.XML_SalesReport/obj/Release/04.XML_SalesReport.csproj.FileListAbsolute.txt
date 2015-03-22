@@ -68,3 +68,5 @@ G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer
 G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
 G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+G:\SotUni\DbTeamProject\04.XML_SalesReport\bin\Release\SagittaDB.Models.dll
+G:\SotUni\DbTeamProject\04.XML_SalesReport\bin\Release\SagittaDB.Models.pdb

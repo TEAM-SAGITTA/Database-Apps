@@ -71,7 +71,6 @@ namespace SagittaMain
                     }
                     catch (Exception exception)
                     {
-                        //throw exception; //TODO DELETE THIS
                         MessageBox.Show("Data loading falied!\n" + exception.Message);
                     }
                 }
@@ -143,6 +142,11 @@ namespace SagittaMain
         {
             var window = new Task5Window();
             window.Show();
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
