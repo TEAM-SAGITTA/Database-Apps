@@ -63,3 +63,16 @@ C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.Z
 C:\Users\Joro\Desktop\Team\Database-Apps\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
 D:\SoftUni\TeamWork\Databases\GitClone\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.dll.config
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\02.ZipReports_To_MSSQL.pdb
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\ICSharpCode.SharpZipLib.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\SagittaDB.Models.pdb
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.xml
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\bin\Release\EntityFramework.SqlServer.xml
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.csprojResolveAssemblyReference.cache
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.dll
+G:\SotUni\DBTeamProject\02.ZipReports_To_MSSQL\obj\Release\02.ZipReports_To_MSSQL.pdb

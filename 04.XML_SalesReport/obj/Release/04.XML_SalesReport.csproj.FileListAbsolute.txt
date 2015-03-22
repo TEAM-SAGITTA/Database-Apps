@@ -58,3 +58,13 @@ D:\SoftUni\TeamWork\Databases\GitClone\04.XML_SalesReport\bin\Release\EntityFram
 D:\SoftUni\TeamWork\Databases\GitClone\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
 D:\SoftUni\TeamWork\Databases\GitClone\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 D:\SoftUni\TeamWork\Databases\GitClone\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll.config
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\04.XML_SalesReport.pdb
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\EntityFramework.dll
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.dll
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\EntityFramework.xml
+G:\SotUni\DBTeamProject\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
+G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
+G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
+G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb

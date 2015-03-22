@@ -53,7 +53,7 @@ namespace SagittaMain
 
         private void LoadExpenseDataFromXML(object sender, RoutedEventArgs e)
         {
-            string filePath = FilePathPicker(".xml");
+            string filePath = SagittaTools.FilePathPicker(".xml");
 
             if (filePath != string.Empty)
             {
@@ -136,31 +136,6 @@ namespace SagittaMain
         {
             var window = new Task5Window();
             window.Show();
-        }
-
-        private static string FilePathPicker(string fileExtension)
-        {
-            Microsoft.Win32.OpenFileDialog filePicker = new Microsoft.Win32.OpenFileDialog();
-            if (fileExtension != "all")
-            {
-                filePicker.DefaultExt = fileExtension.ToString();
-                filePicker.Filter = string.Format("XML files (*{0})|*{0}", fileExtension);
-            }
-
-            // TODO think better way 
-            filePicker.InitialDirectory = Directory.GetParent(
-                Directory.GetParent((
-                Directory.GetParent(
-                Directory.GetCurrentDirectory())).ToString()).ToString()).ToString() + "\\InputFiles";
-            bool? isFilePiced = filePicker.ShowDialog();
-            string filePath = filePicker.FileName;
-
-            return filePath;
-        }
-
-        private static string FilePathPicker()
-        {
-            return FilePathPicker("all");
         }
     }
 }
