@@ -26,6 +26,8 @@ namespace SagittaMain
     using _02.ZipReports_To_MSSQL;
     using _04.XML_SalesReport;
     using _07.MSSQL__to_MySQL;
+    using System.Globalization;
+    using System.Threading;
 
     public partial class MainWindow : Window
     {
@@ -79,8 +81,13 @@ namespace SagittaMain
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("MS SQL to XML Magic !!!");
-            XMLHelper xmlFile = new XMLHelper();
-            
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+            XMLHelper xmlFileManager = new XMLHelper();
+            var startDate = new DateTime(2000, 1, 1);
+            var endDate = new DateTime(2015, 12, 31);
+            var salesReport = xmlFileManager.ReadData(startDate, endDate);
+            string XmlResultFileName = @"..\..\SalesByVendorReport.xml";
+            xmlFileManager.exportToXML(salesReport, XmlResultFileName);
             MessageBox.Show("MS SQL Export to XML file has been finished!");
         }
 
