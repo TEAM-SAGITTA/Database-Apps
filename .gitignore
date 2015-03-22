@@ -233,3 +233,4 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+SagittaDB.Models.MySQL/SagittaDB.Models.MySQL.csproj

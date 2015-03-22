@@ -12,7 +12,7 @@ namespace _04.XML_SalesReport
     {
         public void exportToXML()
         {
-            //1.03
+            //1:03, 1:32, 1:35, 1:38
             XmlDocument doc = new XmlDocument();
             
             var sale = doc.CreateElement("sale");
@@ -24,6 +24,16 @@ namespace _04.XML_SalesReport
             //doc.DocumentElement.AppendChild(sale);
             //doc.Save("SalersReport.xml");
         }
-        
+        public string ReadData()
+        {
+            string outputData = string.Empty;
+
+
+
+
+
+
+            return outputData;
+        }
     }
 }
