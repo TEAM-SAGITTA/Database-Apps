@@ -277,3 +277,4 @@ G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.Resources.DbsPics.Re
 G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
 G:\SotUni\DBTeamProject\SagittaMain\bin\Release\MySql.Data.dll
 G:\SotUni\DBTeamProject\SagittaMain\bin\Release\mysql.data.entity.EF6.dll
+G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.csproj.SagittaMain.exe.config
