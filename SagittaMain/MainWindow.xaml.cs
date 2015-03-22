@@ -80,7 +80,7 @@ namespace SagittaMain
         {
             //MessageBox.Show("MS SQL to XML Magic !!!");
             XMLHelper xmlFile = new XMLHelper();
-            xmlFile.exportToXML();
+            
             MessageBox.Show("MS SQL Export to XML file has been finished!");
         }
 
