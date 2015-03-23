@@ -165,6 +165,20 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SagittaDB.Models.MySQL\SagittaDB.Models.MySQL.csproj">
+      <Project>{3e76c445-609c-4871-8916-3649afc95fd4}</Project>
+      <Name>SagittaDB.Models.MySQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SagittaDB.Models\SagittaDB.Models.csproj">
+      <Project>{81376967-06c1-46b4-92a4-76f5e4c60615}</Project>
+      <Name>SagittaDB.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SagittaMain\SagittaMain.csproj">
+      <Project>{9d3a8c5b-6f14-4f62-ad9a-b098d55b539c}</Project>
+      <Name>SagittaMain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
