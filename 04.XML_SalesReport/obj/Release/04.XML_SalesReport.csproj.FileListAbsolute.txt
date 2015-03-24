@@ -60,6 +60,7 @@ G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 G:\SotUni\DBTeamProject\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
 G:\SotUni\DbTeamProject\04.XML_SalesReport\bin\Release\SagittaDB.Models.dll
 G:\SotUni\DbTeamProject\04.XML_SalesReport\bin\Release\SagittaDB.Models.pdb
+<<<<<<< HEAD
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll.config
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.pdb
@@ -72,3 +73,25 @@ C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\bin\Release\EntityFr
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
 C:\Users\Joro\Desktop\Team\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+=======
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll.config
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\04.XML_SalesReport.pdb
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\mscorlib.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\SagittaDB.Models.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\SagittaDB.Models.pdb
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.xml
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\de\mscorlib.resources.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\es\mscorlib.resources.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\normidna.nlp
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\normnfc.nlp
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\normnfd.nlp
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\normnfkc.nlp
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\bin\Release\normnfkd.nlp
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.csprojResolveAssemblyReference.cache
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.dll
+C:\Users\malina\Documents\GitHub\Database-Apps\04.XML_SalesReport\obj\Release\04.XML_SalesReport.pdb
+>>>>>>> 86b5a017ad758f9cecf9aa847100b4713ea5953b
