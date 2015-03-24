@@ -28,8 +28,6 @@
     using System.Windows.Navigation;
     using System.Windows.Shapes;
 
-    using SagittaDB.Models;
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -116,20 +114,19 @@
         private void MakePdfReportButton_OnClick(object sender, EventArgs e)
         {
             var db = new SagittaDBEntities();
-            var dbProductEntities = db.SalesReports;
-            
+            var dbProductEntities = db.Products;
             //SqlCommand allProducts = new SqlCommand("SELECT * FROM Products", db);
 
-            DataRow dr = GetData("SELECT * FROM SalesReports").Rows[0];
+            DataRow dr = GetData("SELECT * FROM Products where VendorId = 10").Rows[0];
             Document document = new Document(PageSize.A4, 88f, 88f, 10f, 10f);
             Font NormalFont = FontFactory.GetFont("Arial", 12, Font.NORMAL);
-
 
             using (MemoryStream memoryStream = new MemoryStream())
             {
                 var writer = PdfWriter.GetInstance(document, memoryStream);
-                //System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
-                var Response = System.Web.HttpContext.Current.Response;
+               // System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
+
+                
 
                 //var phrase;
                 //var cell;
@@ -140,10 +137,10 @@
                 document.NewPage();
 
                 //Header table
-                var table = new PdfPTable(5);
-                table.TotalWidth = 500f;
+                var table = new PdfPTable(2);
+                table.TotalWidth = 50f;
                 table.LockedWidth = true;
-                table.SetWidths(new float[] { 100f, 50f });
+                table.SetWidths(new float[] { 0.3f, 0.7f });
 
                 //Separater Line
                 DrawLine(writer, 25f, document.Top - 79f, document.PageSize.Width - 25f, document.Top - 79f);
@@ -155,9 +152,8 @@
                 table.SetWidths(new float[] { 0.3f, 1f });
                 table.SpacingBefore = 20f;
 
-
                 //Vendor Details
-                var cell = PhraseCell(new Phrase("Record", FontFactory.GetFont("Arial", 12, Font.UNDERLINE)), PdfPCell.ALIGN_CENTER);
+                var cell = PhraseCell(new Phrase("Vendor Record", FontFactory.GetFont("Arial", 12, Font.UNDERLINE)), PdfPCell.ALIGN_CENTER);
                 cell.Colspan = 2;
                 table.AddCell(cell);
                 cell = PhraseCell(new Phrase(), PdfPCell.ALIGN_CENTER);
@@ -167,8 +163,8 @@
 
                 //Name
                 var phrase = new Phrase();
-                phrase.Add(new Chunk(dr["ProductId"] + "\n", FontFactory.GetFont("Arial", 10, Font.BOLD)));
-                phrase.Add(new Chunk("(" + dr["ReportDate"].ToString() + ")", FontFactory.GetFont("Arial", 8, Font.BOLD)));
+                phrase.Add(new Chunk(dr["VendorName"] + "\n", FontFactory.GetFont("Arial", 10, Font.BOLD)));
+                phrase.Add(new Chunk("(" + dr["Title"].ToString() + ")", FontFactory.GetFont("Arial", 8, Font.BOLD)));
                 cell = PhraseCell(phrase, PdfPCell.ALIGN_LEFT);
                 cell.VerticalAlignment = PdfPCell.ALIGN_MIDDLE;
                 table.AddCell(cell);
@@ -188,7 +184,8 @@
                 byte[] bytes = memoryStream.ToArray();
                 memoryStream.Close();
 
-                
+                System.Web.HttpResponse Response = System.Web.HttpContext.Current.Response;
+
                 Response.ClearContent();
                 Response.Clear();
                 Response.ContentType = "application/pdf";

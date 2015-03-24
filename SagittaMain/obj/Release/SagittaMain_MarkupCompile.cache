@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\
-=======
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\
->>>>>>> 86b5a017ad758f9cecf9aa847100b4713ea5953b
 SagittaMain
 none
 false
 TRACE
-<<<<<<< HEAD
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\App.xaml
 2-519380873
 
 10181342701
 321549878320
-=======
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\App.xaml
-2-519380873
-
-10181342701
-31-262929371
->>>>>>> 86b5a017ad758f9cecf9aa847100b4713ea5953b
 MainWindow.xaml;Task5Window.xaml;
 
 False

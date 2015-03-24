@@ -231,7 +231,6 @@ G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.Resources.DbsPics.Re
 G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
 G:\SotUni\DBTeamProject\SagittaMain\bin\Release\MySql.Data.dll
 G:\SotUni\DBTeamProject\SagittaMain\obj\Release\SagittaMain.csproj.SagittaMain.exe.config
-<<<<<<< HEAD
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\SagittaMain.exe.config
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\SagittaMain.exe
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\bin\Release\SagittaMain.pdb
@@ -279,53 +278,3 @@ C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\SagittaMain.Res
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\SagittaMain.exe
 C:\Users\Joro\Desktop\Team\Database-Apps\SagittaMain\obj\Release\SagittaMain.pdb
-=======
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaMain.exe
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaMain.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\02.ZipReports_To_MSSQL.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\04.XML_SalesReport.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\07.MSSQL _to_MySQL.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\EntityFramework.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\EntityFramework.SqlServer.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\MongoDB.Bson.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\MongoDB.Driver.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\MySql.Data.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.EF6.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.Linq.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Web.Http.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Task5.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Task6.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\ICSharpCode.SharpZipLib.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.MySQL.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Newtonsoft.Json.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Net.Http.Formatting.dll
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\02.ZipReports_To_MSSQL.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\04.XML_SalesReport.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\07.MSSQL _to_MySQL.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Task5.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Task6.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\EntityFramework.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\MongoDB.Bson.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\MongoDB.Driver.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Data.SQLite.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Web.Http.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\SagittaDB.Models.MySQL.pdb
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\Newtonsoft.Json.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\bin\Release\System.Net.Http.Formatting.xml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.csprojResolveAssemblyReference.cache
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.csproj.SagittaMain.exe.config
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\MainWindow.baml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\Task5Window.baml
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\MainWindow.g.cs
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\Task5Window.g.cs
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\App.g.cs
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain_MarkupCompile.cache
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.g.resources
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.Properties.Resources.resources
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.Resources.DbsPics.Resources.resources
-C:\Users\malina\Documents\GitHub\Database-Apps\SagittaMain\obj\Release\SagittaMain.csproj.GenerateResource.Cache
->>>>>>> 86b5a017ad758f9cecf9aa847100b4713ea5953b
